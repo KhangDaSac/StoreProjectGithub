@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tOFULjxxK4+xMlzc6sFmh9/Nw9Ws9LrJf5PFJ8gTAaaAa0n/+so5cDt9GISJ5wzI9uPIjFsczCc0fJk503WbJg==",
+  "dgSpecHash": "47HMa7FLZHDvUNXd0Y0yJFbGNwg9xphhKVIHGJ0eX+IrrMq/i4xzEgDepCXWO/L/2OHH7wOGH2bOLnbvm8ul8w==",
   "success": true,
-  "projectFilePath": "D:\\StoreProject\\WinForm\\Project\\StoreManager\\StoreManager\\StoreManager.csproj",
+  "projectFilePath": "D:\\StoreProject\\StoreProjectGithub\\WinForm\\Project\\StoreManager\\StoreManager\\StoreManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Khang\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Khang\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

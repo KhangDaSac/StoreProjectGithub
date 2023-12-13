@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\StoreProject\\WinForm\\Project\\StoreManager\\StoreManager\\StoreManager.csproj": {}
+    "D:\\StoreProject\\StoreProjectGithub\\WinForm\\Project\\StoreManager\\StoreManager\\StoreManager.csproj": {}
   },
   "projects": {
-    "D:\\StoreProject\\WinForm\\Project\\StoreManager\\StoreManager\\StoreManager.csproj": {
+    "D:\\StoreProject\\StoreProjectGithub\\WinForm\\Project\\StoreManager\\StoreManager\\StoreManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\StoreProject\\WinForm\\Project\\StoreManager\\StoreManager\\StoreManager.csproj",
+        "projectUniqueName": "D:\\StoreProject\\StoreProjectGithub\\WinForm\\Project\\StoreManager\\StoreManager\\StoreManager.csproj",
         "projectName": "StoreManager",
-        "projectPath": "D:\\StoreProject\\WinForm\\Project\\StoreManager\\StoreManager\\StoreManager.csproj",
+        "projectPath": "D:\\StoreProject\\StoreProjectGithub\\WinForm\\Project\\StoreManager\\StoreManager\\StoreManager.csproj",
         "packagesPath": "C:\\Users\\Khang\\.nuget\\packages\\",
-        "outputPath": "D:\\StoreProject\\WinForm\\Project\\StoreManager\\StoreManager\\obj\\",
+        "outputPath": "D:\\StoreProject\\StoreProjectGithub\\WinForm\\Project\\StoreManager\\StoreManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Khang\\AppData\\Roaming\\NuGet\\NuGet.Config",

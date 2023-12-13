@@ -47,5 +47,14 @@ namespace StoreManager.DAO
             }
             return productList;
         }
+
+        public static Product getProductById(List<Product> list, int id)
+        {
+            foreach (Product p in list)
+            {
+                if (p.ProductID == id) return p;
+            }
+            return null;
+        }
     }
 }

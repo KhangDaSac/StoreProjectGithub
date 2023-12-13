@@ -40,7 +40,7 @@ go
 create table Customers(
 	CustomerID int not null identity(1,1) primary key,
 	CustomerName nvarchar(50) not null,
-	Phone nvarchar(11) not null,
+	Phone nvarchar(11),
 	TypeCustomer nvarchar(10) check(TypeCustomer in ('VIP', 'TV', 'VL')) default 'VL',
 	Debt float check(Debt >= 0) default 0
 )
@@ -115,7 +115,13 @@ as
 begin
 	select * from Products
 end
+go
 
+create proc USP_GetCustomerList
+as
+begin
+	select * from Customers
+end
 go
 
 --Stored procedure, DeleteProductById
@@ -148,6 +154,26 @@ begin
 	@Price,
 	@ImportPrice,
 	@QuantityOnHand)
+end
+go
+--insert value into Customers
+create proc USP_InsertValueIntoCustomers
+@CustomerName nvarchar(50),
+@Phone nvarchar(11),
+@TypeCustomer nvarchar(10),
+@Debt float 
+as
+begin
+	insert into Customers (
+	CustomerName,
+	Phone,
+	TypeCustomer,
+	Debt)
+	values(
+	@CustomerName,
+	@Phone,
+	@TypeCustomer,
+	@Debt)
 end
 go
 
@@ -284,6 +310,19 @@ values (
 
 go
 
+--Insert values into Customer
+insert into Customers(
+	CustomerName,
+	Phone,
+	TypeCustomer,
+	Debt)
+values (
+	N'Phạm Văn Khang',
+	N'0339165536',
+	N'VIP',
+	0)
+go
+
 
 select AccountName, LoginName, TypeAcc from Accounts
 
@@ -298,7 +337,7 @@ exec USP_Login @LoginName = N'Khang', @PasswordAcc = '123'
 
 exec USP_DeleteProductById @ProductID = 7
 
-select * from Products 
+select * from Customers 
 
 select * from Accounts where LoginName = '' or 1=1--' and PasswordAcc = '123' 
 
