@@ -30,6 +30,7 @@
         {
             ColumnHeader columnHeader1;
             ColumnHeader columnHeader11;
+            ColumnHeader columnHeader16;
             menuStrip1 = new MenuStrip();
             tàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
             thôngTinTàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
@@ -38,26 +39,26 @@
             tabPageListProduct = new TabPage();
             buttonUpdateProduct = new Button();
             buttonAddProduct = new Button();
-            panelInputPrice = new Panel();
-            numImportPrice = new NumericUpDown();
-            labelInputPrice = new Label();
-            panelQuantity = new Panel();
-            numQuatity = new NumericUpDown();
-            labelQuantity = new Label();
-            panelProductName = new Panel();
-            cbProductName = new ComboBox();
-            labelProductName = new Label();
-            panelUnit = new Panel();
-            cbUnit = new ComboBox();
-            labelUnit = new Label();
-            panelPrice = new Panel();
-            numPrice = new NumericUpDown();
-            labelPrice = new Label();
-            panelProductID = new Panel();
-            textBoxProductID = new TextBox();
-            labelProductID = new Label();
+            panelInputPriceOnList = new Panel();
+            numericUpDownImportPriceOnList = new NumericUpDown();
+            labelInputPriceOnList = new Label();
+            panelQuantityOnList = new Panel();
+            numericUpDownQuatityOnList = new NumericUpDown();
+            labelQuantityOnList = new Label();
+            panelProductNameOnList = new Panel();
+            comboBoxProductNameOnList = new ComboBox();
+            labelProductNameOnList = new Label();
+            panelUnitOnList = new Panel();
+            comboBoxUnitOnList = new ComboBox();
+            labelUnitOnList = new Label();
+            panelPriceOnList = new Panel();
+            numericUpDownPriceOnList = new NumericUpDown();
+            labelPriceOnList = new Label();
+            panelProductIDOnList = new Panel();
+            comboBoxProductIDOnList = new ComboBox();
+            labelProductIDOnList = new Label();
             buttonDeleteProduct = new Button();
-            labelTitle = new Label();
+            labelTitleListProduct = new Label();
             lsvListProduct = new ListView();
             columnHeader2 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
@@ -65,49 +66,44 @@
             columnHeader5 = new ColumnHeader();
             columnHeader6 = new ColumnHeader();
             tpLookUpOrders = new TabPage();
-            listView1 = new ListView();
-            columnHeader7 = new ColumnHeader();
-            columnHeader8 = new ColumnHeader();
-            columnHeader9 = new ColumnHeader();
-            columnHeader10 = new ColumnHeader();
             tpPaying = new TabPage();
             tpNewBuy = new TabPage();
             panel2 = new Panel();
             comboBox1 = new ComboBox();
             label2 = new Label();
-            button4 = new Button();
-            button3 = new Button();
+            buttonBuy = new Button();
+            buttonDeleteProductIntoOrder = new Button();
             button2 = new Button();
-            panel1 = new Panel();
-            numericUpDown3 = new NumericUpDown();
-            label1 = new Label();
-            labelCustomer = new Label();
+            panelTotalAmount = new Panel();
+            numericUpDownTotalAmount = new NumericUpDown();
+            labelTotalAmount = new Label();
+            labelTitleCustomer = new Label();
             lsvNewOrderDetailList = new ListView();
-            panel9 = new Panel();
-            dateTimePicker1 = new DateTimePicker();
-            label13 = new Label();
+            panelOrderDate = new Panel();
+            dateTimePickerOrderDate = new DateTimePicker();
+            labelOrderDate = new Label();
             label12 = new Label();
-            panel8 = new Panel();
-            numericUpDown2 = new NumericUpDown();
-            label11 = new Label();
-            button1 = new Button();
-            panel7 = new Panel();
-            numericUpDown1 = new NumericUpDown();
-            label10 = new Label();
-            labelProduct = new Label();
-            panel5 = new Panel();
-            comboBox5 = new ComboBox();
-            label8 = new Label();
-            panel6 = new Panel();
-            comboBox6 = new ComboBox();
-            label9 = new Label();
-            labelEmployee = new Label();
-            panel3 = new Panel();
-            comboBox3 = new ComboBox();
-            label3 = new Label();
-            panel4 = new Panel();
-            comboBox4 = new ComboBox();
-            label4 = new Label();
+            panelQuatity = new Panel();
+            numericUpDownQuatity = new NumericUpDown();
+            labelQuatity = new Label();
+            buttonAddProductIntoOrder = new Button();
+            panelPrice = new Panel();
+            numericUpDownPrice = new NumericUpDown();
+            labelPrice = new Label();
+            labelTitleProduct = new Label();
+            panelProductID = new Panel();
+            comboBoxProductID = new ComboBox();
+            labelProductID = new Label();
+            panelProductName = new Panel();
+            comboBoxProductName = new ComboBox();
+            labelProductName = new Label();
+            labelTitleEmployee = new Label();
+            panelEmployeeID = new Panel();
+            comboBoxEmployeeID = new ComboBox();
+            labelEmployeeID = new Label();
+            panelEmployeeName = new Panel();
+            comboBoxEmployeeName = new ComboBox();
+            labelEmployeeName = new Label();
             panelCustomerID = new Panel();
             comboBoxCustomerID = new ComboBox();
             labelCustomerID = new Label();
@@ -128,10 +124,10 @@
             comboBoxCustomerPhoneOnList = new ComboBox();
             labelCustomerPhoneOnList = new Label();
             panelTypeCustomerOnList = new Panel();
-            textBoxTypeCustomerOnList = new TextBox();
+            comboBoxTypeCustomerOnList = new ComboBox();
             labelTypeCustomerOnList = new Label();
             panelCustomerIDOnList = new Panel();
-            textBoxCustomerIDOnList = new TextBox();
+            comboBoxCustomerIDOnList = new ComboBox();
             labelCustomerIDOnList = new Label();
             buttonDeleteCustomer = new Button();
             labelTitleListCustomer = new Label();
@@ -141,33 +137,53 @@
             columnHeader14 = new ColumnHeader();
             columnHeader15 = new ColumnHeader();
             tabPage2 = new TabPage();
+            buttonAddEmployee = new Button();
+            buttonUpdateEmployee = new Button();
+            panelTypeEmployeeOnList = new Panel();
+            comboBoxTypeEmployeeOnList = new ComboBox();
+            labelTypeEmployeeOnList = new Label();
+            buttonDeleteEmployee = new Button();
+            panelEmployeeNameOnList = new Panel();
+            comboBoxEmployeeNameOnList = new ComboBox();
+            labelEmployeeNameOnList = new Label();
+            panelEmployeePhoneOnList = new Panel();
+            comboBoxEmployeePhoneOnList = new ComboBox();
+            labelEmployeePhoneOnList = new Label();
+            panelEmployeeIDOnList = new Panel();
+            comboBoxEmployeeIDOnList = new ComboBox();
+            labelEmployeeIDOnList = new Label();
+            labelTitleListEmployee = new Label();
+            lsvListEmployee = new ListView();
+            columnHeader17 = new ColumnHeader();
+            columnHeader18 = new ColumnHeader();
+            columnHeader19 = new ColumnHeader();
             columnHeader1 = new ColumnHeader();
             columnHeader11 = new ColumnHeader();
+            columnHeader16 = new ColumnHeader();
             menuStrip1.SuspendLayout();
             tabPageListProduct.SuspendLayout();
-            panelInputPrice.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numImportPrice).BeginInit();
-            panelQuantity.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numQuatity).BeginInit();
-            panelProductName.SuspendLayout();
-            panelUnit.SuspendLayout();
-            panelPrice.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numPrice).BeginInit();
-            panelProductID.SuspendLayout();
-            tpLookUpOrders.SuspendLayout();
+            panelInputPriceOnList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownImportPriceOnList).BeginInit();
+            panelQuantityOnList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownQuatityOnList).BeginInit();
+            panelProductNameOnList.SuspendLayout();
+            panelUnitOnList.SuspendLayout();
+            panelPriceOnList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownPriceOnList).BeginInit();
+            panelProductIDOnList.SuspendLayout();
             tpNewBuy.SuspendLayout();
             panel2.SuspendLayout();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
-            panel9.SuspendLayout();
-            panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            panel5.SuspendLayout();
-            panel6.SuspendLayout();
-            panel3.SuspendLayout();
-            panel4.SuspendLayout();
+            panelTotalAmount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownTotalAmount).BeginInit();
+            panelOrderDate.SuspendLayout();
+            panelQuatity.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownQuatity).BeginInit();
+            panelPrice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownPrice).BeginInit();
+            panelProductID.SuspendLayout();
+            panelProductName.SuspendLayout();
+            panelEmployeeID.SuspendLayout();
+            panelEmployeeName.SuspendLayout();
             panelCustomerID.SuspendLayout();
             panelCustomerName.SuspendLayout();
             tpProducts.SuspendLayout();
@@ -178,6 +194,11 @@
             panelCustomerPhoneOnList.SuspendLayout();
             panelTypeCustomerOnList.SuspendLayout();
             panelCustomerIDOnList.SuspendLayout();
+            tabPage2.SuspendLayout();
+            panelTypeEmployeeOnList.SuspendLayout();
+            panelEmployeeNameOnList.SuspendLayout();
+            panelEmployeePhoneOnList.SuspendLayout();
+            panelEmployeeIDOnList.SuspendLayout();
             SuspendLayout();
             // 
             // columnHeader1
@@ -189,6 +210,11 @@
             // 
             columnHeader11.Text = "CustomerID";
             columnHeader11.Width = 100;
+            // 
+            // columnHeader16
+            // 
+            columnHeader16.Text = "EmployeeID";
+            columnHeader16.Width = 100;
             // 
             // menuStrip1
             // 
@@ -230,14 +256,14 @@
             // 
             tabPageListProduct.Controls.Add(buttonUpdateProduct);
             tabPageListProduct.Controls.Add(buttonAddProduct);
-            tabPageListProduct.Controls.Add(panelInputPrice);
-            tabPageListProduct.Controls.Add(panelQuantity);
-            tabPageListProduct.Controls.Add(panelProductName);
-            tabPageListProduct.Controls.Add(panelUnit);
-            tabPageListProduct.Controls.Add(panelPrice);
-            tabPageListProduct.Controls.Add(panelProductID);
+            tabPageListProduct.Controls.Add(panelInputPriceOnList);
+            tabPageListProduct.Controls.Add(panelQuantityOnList);
+            tabPageListProduct.Controls.Add(panelProductNameOnList);
+            tabPageListProduct.Controls.Add(panelUnitOnList);
+            tabPageListProduct.Controls.Add(panelPriceOnList);
+            tabPageListProduct.Controls.Add(panelProductIDOnList);
             tabPageListProduct.Controls.Add(buttonDeleteProduct);
-            tabPageListProduct.Controls.Add(labelTitle);
+            tabPageListProduct.Controls.Add(labelTitleListProduct);
             tabPageListProduct.Controls.Add(lsvListProduct);
             tabPageListProduct.Location = new Point(4, 29);
             tabPageListProduct.Name = "tabPageListProduct";
@@ -267,168 +293,168 @@
             buttonAddProduct.UseVisualStyleBackColor = true;
             buttonAddProduct.Click += buttonAddProduct_Click;
             // 
-            // panelInputPrice
+            // panelInputPriceOnList
             // 
-            panelInputPrice.Controls.Add(numImportPrice);
-            panelInputPrice.Controls.Add(labelInputPrice);
-            panelInputPrice.ImeMode = ImeMode.HangulFull;
-            panelInputPrice.Location = new Point(723, 384);
-            panelInputPrice.Name = "panelInputPrice";
-            panelInputPrice.Size = new Size(390, 48);
-            panelInputPrice.TabIndex = 6;
+            panelInputPriceOnList.Controls.Add(numericUpDownImportPriceOnList);
+            panelInputPriceOnList.Controls.Add(labelInputPriceOnList);
+            panelInputPriceOnList.ImeMode = ImeMode.HangulFull;
+            panelInputPriceOnList.Location = new Point(723, 384);
+            panelInputPriceOnList.Name = "panelInputPriceOnList";
+            panelInputPriceOnList.Size = new Size(390, 48);
+            panelInputPriceOnList.TabIndex = 6;
             // 
-            // numImportPrice
+            // numericUpDownImportPriceOnList
             // 
-            numImportPrice.Increment = new decimal(new int[] { 1000, 0, 0, 0 });
-            numImportPrice.Location = new Point(147, 10);
-            numImportPrice.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
-            numImportPrice.Name = "numImportPrice";
-            numImportPrice.Size = new Size(231, 27);
-            numImportPrice.TabIndex = 5;
-            numImportPrice.ThousandsSeparator = true;
+            numericUpDownImportPriceOnList.Increment = new decimal(new int[] { 1000, 0, 0, 0 });
+            numericUpDownImportPriceOnList.Location = new Point(147, 10);
+            numericUpDownImportPriceOnList.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
+            numericUpDownImportPriceOnList.Name = "numericUpDownImportPriceOnList";
+            numericUpDownImportPriceOnList.Size = new Size(231, 27);
+            numericUpDownImportPriceOnList.TabIndex = 5;
+            numericUpDownImportPriceOnList.ThousandsSeparator = true;
             // 
-            // labelInputPrice
+            // labelInputPriceOnList
             // 
-            labelInputPrice.AutoSize = true;
-            labelInputPrice.Location = new Point(19, 12);
-            labelInputPrice.Name = "labelInputPrice";
-            labelInputPrice.Size = new Size(68, 20);
-            labelInputPrice.TabIndex = 0;
-            labelInputPrice.Text = "Giá nhập";
+            labelInputPriceOnList.AutoSize = true;
+            labelInputPriceOnList.Location = new Point(19, 12);
+            labelInputPriceOnList.Name = "labelInputPriceOnList";
+            labelInputPriceOnList.Size = new Size(68, 20);
+            labelInputPriceOnList.TabIndex = 0;
+            labelInputPriceOnList.Text = "Giá nhập";
             // 
-            // panelQuantity
+            // panelQuantityOnList
             // 
-            panelQuantity.Controls.Add(numQuatity);
-            panelQuantity.Controls.Add(labelQuantity);
-            panelQuantity.ImeMode = ImeMode.HangulFull;
-            panelQuantity.Location = new Point(723, 464);
-            panelQuantity.Name = "panelQuantity";
-            panelQuantity.Size = new Size(390, 48);
-            panelQuantity.TabIndex = 6;
+            panelQuantityOnList.Controls.Add(numericUpDownQuatityOnList);
+            panelQuantityOnList.Controls.Add(labelQuantityOnList);
+            panelQuantityOnList.ImeMode = ImeMode.HangulFull;
+            panelQuantityOnList.Location = new Point(723, 464);
+            panelQuantityOnList.Name = "panelQuantityOnList";
+            panelQuantityOnList.Size = new Size(390, 48);
+            panelQuantityOnList.TabIndex = 6;
             // 
-            // numQuatity
+            // numericUpDownQuatityOnList
             // 
-            numQuatity.Location = new Point(147, 10);
-            numQuatity.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
-            numQuatity.Name = "numQuatity";
-            numQuatity.Size = new Size(231, 27);
-            numQuatity.TabIndex = 6;
+            numericUpDownQuatityOnList.Location = new Point(147, 10);
+            numericUpDownQuatityOnList.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
+            numericUpDownQuatityOnList.Name = "numericUpDownQuatityOnList";
+            numericUpDownQuatityOnList.Size = new Size(231, 27);
+            numericUpDownQuatityOnList.TabIndex = 6;
             // 
-            // labelQuantity
+            // labelQuantityOnList
             // 
-            labelQuantity.AutoSize = true;
-            labelQuantity.Location = new Point(19, 12);
-            labelQuantity.Name = "labelQuantity";
-            labelQuantity.Size = new Size(97, 20);
-            labelQuantity.TabIndex = 0;
-            labelQuantity.Text = "Số lượng còn";
+            labelQuantityOnList.AutoSize = true;
+            labelQuantityOnList.Location = new Point(19, 12);
+            labelQuantityOnList.Name = "labelQuantityOnList";
+            labelQuantityOnList.Size = new Size(97, 20);
+            labelQuantityOnList.TabIndex = 0;
+            labelQuantityOnList.Text = "Số lượng còn";
             // 
-            // panelProductName
+            // panelProductNameOnList
             // 
-            panelProductName.Controls.Add(cbProductName);
-            panelProductName.Controls.Add(labelProductName);
-            panelProductName.Location = new Point(723, 142);
-            panelProductName.Name = "panelProductName";
-            panelProductName.Size = new Size(390, 48);
-            panelProductName.TabIndex = 5;
+            panelProductNameOnList.Controls.Add(comboBoxProductNameOnList);
+            panelProductNameOnList.Controls.Add(labelProductNameOnList);
+            panelProductNameOnList.Location = new Point(723, 142);
+            panelProductNameOnList.Name = "panelProductNameOnList";
+            panelProductNameOnList.Size = new Size(390, 48);
+            panelProductNameOnList.TabIndex = 5;
             // 
-            // cbProductName
+            // comboBoxProductNameOnList
             // 
-            cbProductName.FormattingEnabled = true;
-            cbProductName.Location = new Point(147, 9);
-            cbProductName.Name = "cbProductName";
-            cbProductName.Size = new Size(231, 28);
-            cbProductName.TabIndex = 2;
+            comboBoxProductNameOnList.FormattingEnabled = true;
+            comboBoxProductNameOnList.Location = new Point(147, 9);
+            comboBoxProductNameOnList.Name = "comboBoxProductNameOnList";
+            comboBoxProductNameOnList.Size = new Size(231, 28);
+            comboBoxProductNameOnList.TabIndex = 2;
             // 
-            // labelProductName
+            // labelProductNameOnList
             // 
-            labelProductName.AutoSize = true;
-            labelProductName.Location = new Point(19, 12);
-            labelProductName.Name = "labelProductName";
-            labelProductName.Size = new Size(69, 20);
-            labelProductName.TabIndex = 0;
-            labelProductName.Text = "Tên hàng";
+            labelProductNameOnList.AutoSize = true;
+            labelProductNameOnList.Location = new Point(19, 12);
+            labelProductNameOnList.Name = "labelProductNameOnList";
+            labelProductNameOnList.Size = new Size(69, 20);
+            labelProductNameOnList.TabIndex = 0;
+            labelProductNameOnList.Text = "Tên hàng";
             // 
-            // panelUnit
+            // panelUnitOnList
             // 
-            panelUnit.Controls.Add(cbUnit);
-            panelUnit.Controls.Add(labelUnit);
-            panelUnit.Location = new Point(723, 220);
-            panelUnit.Name = "panelUnit";
-            panelUnit.Size = new Size(390, 48);
-            panelUnit.TabIndex = 5;
+            panelUnitOnList.Controls.Add(comboBoxUnitOnList);
+            panelUnitOnList.Controls.Add(labelUnitOnList);
+            panelUnitOnList.Location = new Point(723, 220);
+            panelUnitOnList.Name = "panelUnitOnList";
+            panelUnitOnList.Size = new Size(390, 48);
+            panelUnitOnList.TabIndex = 5;
             // 
-            // cbUnit
+            // comboBoxUnitOnList
             // 
-            cbUnit.FormattingEnabled = true;
-            cbUnit.Location = new Point(147, 9);
-            cbUnit.Name = "cbUnit";
-            cbUnit.Size = new Size(231, 28);
-            cbUnit.TabIndex = 3;
+            comboBoxUnitOnList.FormattingEnabled = true;
+            comboBoxUnitOnList.Location = new Point(147, 9);
+            comboBoxUnitOnList.Name = "comboBoxUnitOnList";
+            comboBoxUnitOnList.Size = new Size(231, 28);
+            comboBoxUnitOnList.TabIndex = 3;
             // 
-            // labelUnit
+            // labelUnitOnList
             // 
-            labelUnit.AutoSize = true;
-            labelUnit.Location = new Point(19, 12);
-            labelUnit.Name = "labelUnit";
-            labelUnit.Size = new Size(52, 20);
-            labelUnit.TabIndex = 0;
-            labelUnit.Text = "Đơn vị";
+            labelUnitOnList.AutoSize = true;
+            labelUnitOnList.Location = new Point(19, 12);
+            labelUnitOnList.Name = "labelUnitOnList";
+            labelUnitOnList.Size = new Size(52, 20);
+            labelUnitOnList.TabIndex = 0;
+            labelUnitOnList.Text = "Đơn vị";
             // 
-            // panelPrice
+            // panelPriceOnList
             // 
-            panelPrice.Controls.Add(numPrice);
-            panelPrice.Controls.Add(labelPrice);
-            panelPrice.ImeMode = ImeMode.HangulFull;
-            panelPrice.Location = new Point(723, 303);
-            panelPrice.Name = "panelPrice";
-            panelPrice.Size = new Size(390, 48);
-            panelPrice.TabIndex = 5;
+            panelPriceOnList.Controls.Add(numericUpDownPriceOnList);
+            panelPriceOnList.Controls.Add(labelPriceOnList);
+            panelPriceOnList.ImeMode = ImeMode.HangulFull;
+            panelPriceOnList.Location = new Point(723, 303);
+            panelPriceOnList.Name = "panelPriceOnList";
+            panelPriceOnList.Size = new Size(390, 48);
+            panelPriceOnList.TabIndex = 5;
             // 
-            // numPrice
+            // numericUpDownPriceOnList
             // 
-            numPrice.Increment = new decimal(new int[] { 1000, 0, 0, 0 });
-            numPrice.Location = new Point(147, 10);
-            numPrice.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
-            numPrice.Name = "numPrice";
-            numPrice.Size = new Size(231, 27);
-            numPrice.TabIndex = 4;
-            numPrice.ThousandsSeparator = true;
+            numericUpDownPriceOnList.Increment = new decimal(new int[] { 1000, 0, 0, 0 });
+            numericUpDownPriceOnList.Location = new Point(147, 10);
+            numericUpDownPriceOnList.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
+            numericUpDownPriceOnList.Name = "numericUpDownPriceOnList";
+            numericUpDownPriceOnList.Size = new Size(231, 27);
+            numericUpDownPriceOnList.TabIndex = 4;
+            numericUpDownPriceOnList.ThousandsSeparator = true;
             // 
-            // labelPrice
+            // labelPriceOnList
             // 
-            labelPrice.AutoSize = true;
-            labelPrice.Location = new Point(19, 12);
-            labelPrice.Name = "labelPrice";
-            labelPrice.Size = new Size(60, 20);
-            labelPrice.TabIndex = 0;
-            labelPrice.Text = "Giá bán";
+            labelPriceOnList.AutoSize = true;
+            labelPriceOnList.Location = new Point(19, 12);
+            labelPriceOnList.Name = "labelPriceOnList";
+            labelPriceOnList.Size = new Size(60, 20);
+            labelPriceOnList.TabIndex = 0;
+            labelPriceOnList.Text = "Giá bán";
             // 
-            // panelProductID
+            // panelProductIDOnList
             // 
-            panelProductID.Controls.Add(textBoxProductID);
-            panelProductID.Controls.Add(labelProductID);
-            panelProductID.Location = new Point(723, 67);
-            panelProductID.Name = "panelProductID";
-            panelProductID.Size = new Size(390, 48);
-            panelProductID.TabIndex = 4;
+            panelProductIDOnList.Controls.Add(comboBoxProductIDOnList);
+            panelProductIDOnList.Controls.Add(labelProductIDOnList);
+            panelProductIDOnList.Location = new Point(723, 67);
+            panelProductIDOnList.Name = "panelProductIDOnList";
+            panelProductIDOnList.Size = new Size(390, 48);
+            panelProductIDOnList.TabIndex = 4;
             // 
-            // textBoxProductID
+            // comboBoxProductIDOnList
             // 
-            textBoxProductID.Location = new Point(147, 9);
-            textBoxProductID.Name = "textBoxProductID";
-            textBoxProductID.ReadOnly = true;
-            textBoxProductID.Size = new Size(231, 27);
-            textBoxProductID.TabIndex = 1;
+            comboBoxProductIDOnList.FormattingEnabled = true;
+            comboBoxProductIDOnList.Location = new Point(147, 12);
+            comboBoxProductIDOnList.Name = "comboBoxProductIDOnList";
+            comboBoxProductIDOnList.Size = new Size(231, 28);
+            comboBoxProductIDOnList.TabIndex = 3;
             // 
-            // labelProductID
+            // labelProductIDOnList
             // 
-            labelProductID.AutoSize = true;
-            labelProductID.Location = new Point(19, 12);
-            labelProductID.Name = "labelProductID";
-            labelProductID.Size = new Size(61, 20);
-            labelProductID.TabIndex = 0;
-            labelProductID.Text = "ID hàng";
+            labelProductIDOnList.AutoSize = true;
+            labelProductIDOnList.Location = new Point(19, 12);
+            labelProductIDOnList.Name = "labelProductIDOnList";
+            labelProductIDOnList.Size = new Size(61, 20);
+            labelProductIDOnList.TabIndex = 0;
+            labelProductIDOnList.Text = "ID hàng";
             // 
             // buttonDeleteProduct
             // 
@@ -440,15 +466,15 @@
             buttonDeleteProduct.UseVisualStyleBackColor = true;
             buttonDeleteProduct.Click += buttonDeleteProduct_Click;
             // 
-            // labelTitle
+            // labelTitleListProduct
             // 
-            labelTitle.AutoSize = true;
-            labelTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            labelTitle.Location = new Point(27, 16);
-            labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(313, 31);
-            labelTitle.TabIndex = 1;
-            labelTitle.Text = "DANH SÁCH CÁC MẶT HÀNG";
+            labelTitleListProduct.AutoSize = true;
+            labelTitleListProduct.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTitleListProduct.Location = new Point(27, 16);
+            labelTitleListProduct.Name = "labelTitleListProduct";
+            labelTitleListProduct.Size = new Size(313, 31);
+            labelTitleListProduct.TabIndex = 1;
+            labelTitleListProduct.Text = "DANH SÁCH CÁC MẶT HÀNG";
             // 
             // lsvListProduct
             // 
@@ -493,7 +519,6 @@
             // 
             // tpLookUpOrders
             // 
-            tpLookUpOrders.Controls.Add(listView1);
             tpLookUpOrders.Location = new Point(4, 29);
             tpLookUpOrders.Name = "tpLookUpOrders";
             tpLookUpOrders.Padding = new Padding(3);
@@ -501,16 +526,6 @@
             tpLookUpOrders.TabIndex = 2;
             tpLookUpOrders.Text = "Danh sách hóa đơn";
             tpLookUpOrders.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader7, columnHeader8, columnHeader9, columnHeader10 });
-            listView1.Location = new Point(204, 131);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(359, 226);
-            listView1.TabIndex = 0;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
             // 
             // tpPaying
             // 
@@ -525,23 +540,23 @@
             // tpNewBuy
             // 
             tpNewBuy.Controls.Add(panel2);
-            tpNewBuy.Controls.Add(button4);
-            tpNewBuy.Controls.Add(button3);
+            tpNewBuy.Controls.Add(buttonBuy);
+            tpNewBuy.Controls.Add(buttonDeleteProductIntoOrder);
             tpNewBuy.Controls.Add(button2);
-            tpNewBuy.Controls.Add(panel1);
-            tpNewBuy.Controls.Add(labelCustomer);
+            tpNewBuy.Controls.Add(panelTotalAmount);
+            tpNewBuy.Controls.Add(labelTitleCustomer);
             tpNewBuy.Controls.Add(lsvNewOrderDetailList);
-            tpNewBuy.Controls.Add(panel9);
+            tpNewBuy.Controls.Add(panelOrderDate);
             tpNewBuy.Controls.Add(label12);
-            tpNewBuy.Controls.Add(panel8);
-            tpNewBuy.Controls.Add(button1);
-            tpNewBuy.Controls.Add(panel7);
-            tpNewBuy.Controls.Add(labelProduct);
-            tpNewBuy.Controls.Add(panel5);
-            tpNewBuy.Controls.Add(panel6);
-            tpNewBuy.Controls.Add(labelEmployee);
-            tpNewBuy.Controls.Add(panel3);
-            tpNewBuy.Controls.Add(panel4);
+            tpNewBuy.Controls.Add(panelQuatity);
+            tpNewBuy.Controls.Add(buttonAddProductIntoOrder);
+            tpNewBuy.Controls.Add(panelPrice);
+            tpNewBuy.Controls.Add(labelTitleProduct);
+            tpNewBuy.Controls.Add(panelProductID);
+            tpNewBuy.Controls.Add(panelProductName);
+            tpNewBuy.Controls.Add(labelTitleEmployee);
+            tpNewBuy.Controls.Add(panelEmployeeID);
+            tpNewBuy.Controls.Add(panelEmployeeName);
             tpNewBuy.Controls.Add(panelCustomerID);
             tpNewBuy.Controls.Add(panelCustomerName);
             tpNewBuy.Location = new Point(4, 29);
@@ -574,27 +589,27 @@
             label2.AutoSize = true;
             label2.Location = new Point(19, 12);
             label2.Name = "label2";
-            label2.Size = new Size(83, 20);
+            label2.Size = new Size(100, 20);
             label2.TabIndex = 0;
-            label2.Text = "Thanh toán";
+            label2.Text = "PT thanh toán";
             // 
-            // button4
+            // buttonBuy
             // 
-            button4.Location = new Point(965, 606);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 29);
-            button4.TabIndex = 17;
-            button4.Text = "Mua";
-            button4.UseVisualStyleBackColor = true;
+            buttonBuy.Location = new Point(965, 606);
+            buttonBuy.Name = "buttonBuy";
+            buttonBuy.Size = new Size(94, 29);
+            buttonBuy.TabIndex = 17;
+            buttonBuy.Text = "Mua";
+            buttonBuy.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonDeleteProductIntoOrder
             // 
-            button3.Location = new Point(166, 606);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 29);
-            button3.TabIndex = 16;
-            button3.Text = "Xóa";
-            button3.UseVisualStyleBackColor = true;
+            buttonDeleteProductIntoOrder.Location = new Point(166, 606);
+            buttonDeleteProductIntoOrder.Name = "buttonDeleteProductIntoOrder";
+            buttonDeleteProductIntoOrder.Size = new Size(94, 29);
+            buttonDeleteProductIntoOrder.TabIndex = 16;
+            buttonDeleteProductIntoOrder.Text = "Xóa";
+            buttonDeleteProductIntoOrder.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -605,41 +620,44 @@
             button2.Text = "Chỉnh sửa";
             button2.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // panelTotalAmount
             // 
-            panel1.Controls.Add(numericUpDown3);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(465, 433);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(390, 48);
-            panel1.TabIndex = 10;
+            panelTotalAmount.Controls.Add(numericUpDownTotalAmount);
+            panelTotalAmount.Controls.Add(labelTotalAmount);
+            panelTotalAmount.Location = new Point(465, 433);
+            panelTotalAmount.Name = "panelTotalAmount";
+            panelTotalAmount.Size = new Size(390, 48);
+            panelTotalAmount.TabIndex = 10;
             // 
-            // numericUpDown3
+            // numericUpDownTotalAmount
             // 
-            numericUpDown3.Location = new Point(147, 10);
-            numericUpDown3.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
-            numericUpDown3.Name = "numericUpDown3";
-            numericUpDown3.Size = new Size(231, 27);
-            numericUpDown3.TabIndex = 1;
+            numericUpDownTotalAmount.Increment = new decimal(new int[] { 1000, 0, 0, 0 });
+            numericUpDownTotalAmount.Location = new Point(147, 10);
+            numericUpDownTotalAmount.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
+            numericUpDownTotalAmount.Name = "numericUpDownTotalAmount";
+            numericUpDownTotalAmount.ReadOnly = true;
+            numericUpDownTotalAmount.Size = new Size(231, 27);
+            numericUpDownTotalAmount.TabIndex = 1;
+            numericUpDownTotalAmount.ThousandsSeparator = true;
             // 
-            // label1
+            // labelTotalAmount
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(19, 12);
-            label1.Name = "label1";
-            label1.Size = new Size(113, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Tổng thành tiền";
+            labelTotalAmount.AutoSize = true;
+            labelTotalAmount.Location = new Point(19, 12);
+            labelTotalAmount.Name = "labelTotalAmount";
+            labelTotalAmount.Size = new Size(113, 20);
+            labelTotalAmount.TabIndex = 0;
+            labelTotalAmount.Text = "Tổng thành tiền";
             // 
-            // labelCustomer
+            // labelTitleCustomer
             // 
-            labelCustomer.AutoSize = true;
-            labelCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCustomer.Location = new Point(33, 12);
-            labelCustomer.Name = "labelCustomer";
-            labelCustomer.Size = new Size(138, 28);
-            labelCustomer.TabIndex = 14;
-            labelCustomer.Text = "KHÁCH HÀNG";
+            labelTitleCustomer.AutoSize = true;
+            labelTitleCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTitleCustomer.Location = new Point(33, 12);
+            labelTitleCustomer.Name = "labelTitleCustomer";
+            labelTitleCustomer.Size = new Size(138, 28);
+            labelTitleCustomer.TabIndex = 14;
+            labelTitleCustomer.Text = "KHÁCH HÀNG";
             // 
             // lsvNewOrderDetailList
             // 
@@ -649,30 +667,30 @@
             lsvNewOrderDetailList.TabIndex = 13;
             lsvNewOrderDetailList.UseCompatibleStateImageBehavior = false;
             // 
-            // panel9
+            // panelOrderDate
             // 
-            panel9.Controls.Add(dateTimePicker1);
-            panel9.Controls.Add(label13);
-            panel9.Location = new Point(465, 379);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(390, 48);
-            panel9.TabIndex = 11;
+            panelOrderDate.Controls.Add(dateTimePickerOrderDate);
+            panelOrderDate.Controls.Add(labelOrderDate);
+            panelOrderDate.Location = new Point(465, 379);
+            panelOrderDate.Name = "panelOrderDate";
+            panelOrderDate.Size = new Size(390, 48);
+            panelOrderDate.TabIndex = 11;
             // 
-            // dateTimePicker1
+            // dateTimePickerOrderDate
             // 
-            dateTimePicker1.Location = new Point(147, 10);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(231, 27);
-            dateTimePicker1.TabIndex = 1;
+            dateTimePickerOrderDate.Location = new Point(147, 10);
+            dateTimePickerOrderDate.Name = "dateTimePickerOrderDate";
+            dateTimePickerOrderDate.Size = new Size(231, 27);
+            dateTimePickerOrderDate.TabIndex = 1;
             // 
-            // label13
+            // labelOrderDate
             // 
-            label13.AutoSize = true;
-            label13.Location = new Point(19, 12);
-            label13.Name = "label13";
-            label13.Size = new Size(77, 20);
-            label13.TabIndex = 0;
-            label13.Text = "Ngày mua";
+            labelOrderDate.AutoSize = true;
+            labelOrderDate.Location = new Point(19, 12);
+            labelOrderDate.Name = "labelOrderDate";
+            labelOrderDate.Size = new Size(77, 20);
+            labelOrderDate.TabIndex = 0;
+            labelOrderDate.Text = "Ngày mua";
             // 
             // label12
             // 
@@ -684,188 +702,192 @@
             label12.TabIndex = 12;
             label12.Text = "DANH SÁCH MẶT HÀNG";
             // 
-            // panel8
+            // panelQuatity
             // 
-            panel8.Controls.Add(numericUpDown2);
-            panel8.Controls.Add(label11);
-            panel8.Location = new Point(19, 541);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(390, 48);
-            panel8.TabIndex = 10;
+            panelQuatity.Controls.Add(numericUpDownQuatity);
+            panelQuatity.Controls.Add(labelQuatity);
+            panelQuatity.Location = new Point(19, 541);
+            panelQuatity.Name = "panelQuatity";
+            panelQuatity.Size = new Size(390, 48);
+            panelQuatity.TabIndex = 10;
             // 
-            // numericUpDown2
+            // numericUpDownQuatity
             // 
-            numericUpDown2.Location = new Point(147, 10);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(231, 27);
-            numericUpDown2.TabIndex = 1;
+            numericUpDownQuatity.Location = new Point(147, 10);
+            numericUpDownQuatity.Name = "numericUpDownQuatity";
+            numericUpDownQuatity.Size = new Size(231, 27);
+            numericUpDownQuatity.TabIndex = 1;
             // 
-            // label11
+            // labelQuatity
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(19, 12);
-            label11.Name = "label11";
-            label11.Size = new Size(69, 20);
-            label11.TabIndex = 0;
-            label11.Text = "Số lượng";
+            labelQuatity.AutoSize = true;
+            labelQuatity.Location = new Point(19, 12);
+            labelQuatity.Name = "labelQuatity";
+            labelQuatity.Size = new Size(69, 20);
+            labelQuatity.TabIndex = 0;
+            labelQuatity.Text = "Số lượng";
             // 
-            // button1
+            // buttonAddProductIntoOrder
             // 
-            button1.Location = new Point(19, 606);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 11;
-            button1.Text = "Thêm";
-            button1.UseVisualStyleBackColor = true;
+            buttonAddProductIntoOrder.Location = new Point(19, 606);
+            buttonAddProductIntoOrder.Name = "buttonAddProductIntoOrder";
+            buttonAddProductIntoOrder.Size = new Size(94, 29);
+            buttonAddProductIntoOrder.TabIndex = 11;
+            buttonAddProductIntoOrder.Text = "Thêm";
+            buttonAddProductIntoOrder.UseVisualStyleBackColor = true;
             // 
-            // panel7
+            // panelPrice
             // 
-            panel7.Controls.Add(numericUpDown1);
-            panel7.Controls.Add(label10);
-            panel7.Location = new Point(19, 487);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(390, 48);
-            panel7.TabIndex = 9;
+            panelPrice.Controls.Add(numericUpDownPrice);
+            panelPrice.Controls.Add(labelPrice);
+            panelPrice.Location = new Point(19, 487);
+            panelPrice.Name = "panelPrice";
+            panelPrice.Size = new Size(390, 48);
+            panelPrice.TabIndex = 9;
             // 
-            // numericUpDown1
+            // numericUpDownPrice
             // 
-            numericUpDown1.Location = new Point(147, 10);
-            numericUpDown1.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(231, 27);
-            numericUpDown1.TabIndex = 1;
+            numericUpDownPrice.Increment = new decimal(new int[] { 0, 0, 0, 0 });
+            numericUpDownPrice.Location = new Point(147, 12);
+            numericUpDownPrice.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
+            numericUpDownPrice.Name = "numericUpDownPrice";
+            numericUpDownPrice.ReadOnly = true;
+            numericUpDownPrice.Size = new Size(231, 27);
+            numericUpDownPrice.TabIndex = 2;
+            numericUpDownPrice.ThousandsSeparator = true;
             // 
-            // label10
+            // labelPrice
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(19, 12);
-            label10.Name = "label10";
-            label10.Size = new Size(31, 20);
-            label10.TabIndex = 0;
-            label10.Text = "Giá";
+            labelPrice.AutoSize = true;
+            labelPrice.Location = new Point(19, 12);
+            labelPrice.Name = "labelPrice";
+            labelPrice.Size = new Size(31, 20);
+            labelPrice.TabIndex = 0;
+            labelPrice.Text = "Giá";
             // 
-            // labelProduct
+            // labelTitleProduct
             // 
-            labelProduct.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelProduct.Location = new Point(36, 338);
-            labelProduct.Name = "labelProduct";
-            labelProduct.Size = new Size(114, 28);
-            labelProduct.TabIndex = 10;
-            labelProduct.Text = "MẶT HÀNG";
+            labelTitleProduct.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTitleProduct.Location = new Point(36, 338);
+            labelTitleProduct.Name = "labelTitleProduct";
+            labelTitleProduct.Size = new Size(114, 28);
+            labelTitleProduct.TabIndex = 10;
+            labelTitleProduct.Text = "MẶT HÀNG";
             // 
-            // panel5
+            // panelProductID
             // 
-            panel5.Controls.Add(comboBox5);
-            panel5.Controls.Add(label8);
-            panel5.Location = new Point(19, 379);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(390, 48);
-            panel5.TabIndex = 9;
+            panelProductID.Controls.Add(comboBoxProductID);
+            panelProductID.Controls.Add(labelProductID);
+            panelProductID.Location = new Point(19, 379);
+            panelProductID.Name = "panelProductID";
+            panelProductID.Size = new Size(390, 48);
+            panelProductID.TabIndex = 9;
             // 
-            // comboBox5
+            // comboBoxProductID
             // 
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(147, 9);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(231, 28);
-            comboBox5.TabIndex = 1;
+            comboBoxProductID.FormattingEnabled = true;
+            comboBoxProductID.Location = new Point(147, 9);
+            comboBoxProductID.Name = "comboBoxProductID";
+            comboBoxProductID.Size = new Size(231, 28);
+            comboBoxProductID.TabIndex = 1;
+            comboBoxProductID.SelectedIndexChanged += comboBoxProductID_SelectedIndexChanged;
             // 
-            // label8
+            // labelProductID
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(19, 12);
-            label8.Name = "label8";
-            label8.Size = new Size(92, 20);
-            label8.TabIndex = 0;
-            label8.Text = "ID sản phẩm";
+            labelProductID.AutoSize = true;
+            labelProductID.Location = new Point(19, 12);
+            labelProductID.Name = "labelProductID";
+            labelProductID.Size = new Size(92, 20);
+            labelProductID.TabIndex = 0;
+            labelProductID.Text = "ID sản phẩm";
             // 
-            // panel6
+            // panelProductName
             // 
-            panel6.Controls.Add(comboBox6);
-            panel6.Controls.Add(label9);
-            panel6.Location = new Point(19, 433);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(390, 48);
-            panel6.TabIndex = 8;
+            panelProductName.Controls.Add(comboBoxProductName);
+            panelProductName.Controls.Add(labelProductName);
+            panelProductName.Location = new Point(19, 433);
+            panelProductName.Name = "panelProductName";
+            panelProductName.Size = new Size(390, 48);
+            panelProductName.TabIndex = 8;
             // 
-            // comboBox6
+            // comboBoxProductName
             // 
-            comboBox6.FormattingEnabled = true;
-            comboBox6.Location = new Point(147, 9);
-            comboBox6.Name = "comboBox6";
-            comboBox6.Size = new Size(231, 28);
-            comboBox6.TabIndex = 1;
+            comboBoxProductName.FormattingEnabled = true;
+            comboBoxProductName.Location = new Point(147, 9);
+            comboBoxProductName.Name = "comboBoxProductName";
+            comboBoxProductName.Size = new Size(231, 28);
+            comboBoxProductName.TabIndex = 1;
             // 
-            // label9
+            // labelProductName
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(19, 12);
-            label9.Name = "label9";
-            label9.Size = new Size(100, 20);
-            label9.TabIndex = 0;
-            label9.Text = "Tên sản phẩm";
+            labelProductName.AutoSize = true;
+            labelProductName.Location = new Point(19, 12);
+            labelProductName.Name = "labelProductName";
+            labelProductName.Size = new Size(100, 20);
+            labelProductName.TabIndex = 0;
+            labelProductName.Text = "Tên sản phẩm";
             // 
-            // labelEmployee
+            // labelTitleEmployee
             // 
-            labelEmployee.AutoSize = true;
-            labelEmployee.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelEmployee.Location = new Point(36, 168);
-            labelEmployee.Name = "labelEmployee";
-            labelEmployee.Size = new Size(116, 28);
-            labelEmployee.TabIndex = 7;
-            labelEmployee.Text = "NHÂN VIÊN";
+            labelTitleEmployee.AutoSize = true;
+            labelTitleEmployee.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTitleEmployee.Location = new Point(36, 168);
+            labelTitleEmployee.Name = "labelTitleEmployee";
+            labelTitleEmployee.Size = new Size(116, 28);
+            labelTitleEmployee.TabIndex = 7;
+            labelTitleEmployee.Text = "NHÂN VIÊN";
             // 
-            // panel3
+            // panelEmployeeID
             // 
-            panel3.Controls.Add(comboBox3);
-            panel3.Controls.Add(label3);
-            panel3.Location = new Point(18, 208);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(390, 48);
-            panel3.TabIndex = 5;
+            panelEmployeeID.Controls.Add(comboBoxEmployeeID);
+            panelEmployeeID.Controls.Add(labelEmployeeID);
+            panelEmployeeID.Location = new Point(18, 208);
+            panelEmployeeID.Name = "panelEmployeeID";
+            panelEmployeeID.Size = new Size(390, 48);
+            panelEmployeeID.TabIndex = 5;
             // 
-            // comboBox3
+            // comboBoxEmployeeID
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(147, 9);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(231, 28);
-            comboBox3.TabIndex = 1;
+            comboBoxEmployeeID.FormattingEnabled = true;
+            comboBoxEmployeeID.Location = new Point(147, 9);
+            comboBoxEmployeeID.Name = "comboBoxEmployeeID";
+            comboBoxEmployeeID.Size = new Size(231, 28);
+            comboBoxEmployeeID.TabIndex = 1;
             // 
-            // label3
+            // labelEmployeeID
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(19, 12);
-            label3.Name = "label3";
-            label3.Size = new Size(91, 20);
-            label3.TabIndex = 0;
-            label3.Text = "ID nhân viên";
+            labelEmployeeID.AutoSize = true;
+            labelEmployeeID.Location = new Point(19, 12);
+            labelEmployeeID.Name = "labelEmployeeID";
+            labelEmployeeID.Size = new Size(91, 20);
+            labelEmployeeID.TabIndex = 0;
+            labelEmployeeID.Text = "ID nhân viên";
             // 
-            // panel4
+            // panelEmployeeName
             // 
-            panel4.Controls.Add(comboBox4);
-            panel4.Controls.Add(label4);
-            panel4.Location = new Point(18, 262);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(390, 48);
-            panel4.TabIndex = 4;
+            panelEmployeeName.Controls.Add(comboBoxEmployeeName);
+            panelEmployeeName.Controls.Add(labelEmployeeName);
+            panelEmployeeName.Location = new Point(18, 262);
+            panelEmployeeName.Name = "panelEmployeeName";
+            panelEmployeeName.Size = new Size(390, 48);
+            panelEmployeeName.TabIndex = 4;
             // 
-            // comboBox4
+            // comboBoxEmployeeName
             // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(147, 9);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(231, 28);
-            comboBox4.TabIndex = 1;
+            comboBoxEmployeeName.FormattingEnabled = true;
+            comboBoxEmployeeName.Location = new Point(147, 9);
+            comboBoxEmployeeName.Name = "comboBoxEmployeeName";
+            comboBoxEmployeeName.Size = new Size(231, 28);
+            comboBoxEmployeeName.TabIndex = 1;
             // 
-            // label4
+            // labelEmployeeName
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(19, 12);
-            label4.Name = "label4";
-            label4.Size = new Size(99, 20);
-            label4.TabIndex = 0;
-            label4.Text = "Tên nhân viên";
+            labelEmployeeName.AutoSize = true;
+            labelEmployeeName.Location = new Point(19, 12);
+            labelEmployeeName.Name = "labelEmployeeName";
+            labelEmployeeName.Size = new Size(99, 20);
+            labelEmployeeName.TabIndex = 0;
+            labelEmployeeName.Text = "Tên nhân viên";
             // 
             // panelCustomerID
             // 
@@ -879,7 +901,10 @@
             // comboBoxCustomerID
             // 
             comboBoxCustomerID.FormattingEnabled = true;
+            comboBoxCustomerID.ItemHeight = 20;
             comboBoxCustomerID.Location = new Point(147, 9);
+            comboBoxCustomerID.MaxDropDownItems = 5;
+            comboBoxCustomerID.MaxLength = 10;
             comboBoxCustomerID.Name = "comboBoxCustomerID";
             comboBoxCustomerID.Size = new Size(231, 28);
             comboBoxCustomerID.TabIndex = 1;
@@ -961,6 +986,7 @@
             buttonUpdateCustomer.TabIndex = 20;
             buttonUpdateCustomer.Text = "Chỉnh sửa";
             buttonUpdateCustomer.UseVisualStyleBackColor = true;
+            buttonUpdateCustomer.Click += buttonUpdateCustomer_Click;
             // 
             // buttonAddCustomer
             // 
@@ -1055,7 +1081,7 @@
             // 
             // panelTypeCustomerOnList
             // 
-            panelTypeCustomerOnList.Controls.Add(textBoxTypeCustomerOnList);
+            panelTypeCustomerOnList.Controls.Add(comboBoxTypeCustomerOnList);
             panelTypeCustomerOnList.Controls.Add(labelTypeCustomerOnList);
             panelTypeCustomerOnList.ImeMode = ImeMode.HangulFull;
             panelTypeCustomerOnList.Location = new Point(717, 312);
@@ -1063,12 +1089,13 @@
             panelTypeCustomerOnList.Size = new Size(390, 48);
             panelTypeCustomerOnList.TabIndex = 15;
             // 
-            // textBoxTypeCustomerOnList
+            // comboBoxTypeCustomerOnList
             // 
-            textBoxTypeCustomerOnList.Location = new Point(147, 12);
-            textBoxTypeCustomerOnList.Name = "textBoxTypeCustomerOnList";
-            textBoxTypeCustomerOnList.Size = new Size(231, 27);
-            textBoxTypeCustomerOnList.TabIndex = 1;
+            comboBoxTypeCustomerOnList.FormattingEnabled = true;
+            comboBoxTypeCustomerOnList.Location = new Point(147, 12);
+            comboBoxTypeCustomerOnList.Name = "comboBoxTypeCustomerOnList";
+            comboBoxTypeCustomerOnList.Size = new Size(231, 28);
+            comboBoxTypeCustomerOnList.TabIndex = 1;
             // 
             // labelTypeCustomerOnList
             // 
@@ -1081,20 +1108,20 @@
             // 
             // panelCustomerIDOnList
             // 
-            panelCustomerIDOnList.Controls.Add(textBoxCustomerIDOnList);
+            panelCustomerIDOnList.Controls.Add(comboBoxCustomerIDOnList);
             panelCustomerIDOnList.Controls.Add(labelCustomerIDOnList);
             panelCustomerIDOnList.Location = new Point(717, 76);
             panelCustomerIDOnList.Name = "panelCustomerIDOnList";
             panelCustomerIDOnList.Size = new Size(390, 48);
             panelCustomerIDOnList.TabIndex = 12;
             // 
-            // textBoxCustomerIDOnList
+            // comboBoxCustomerIDOnList
             // 
-            textBoxCustomerIDOnList.Location = new Point(147, 9);
-            textBoxCustomerIDOnList.Name = "textBoxCustomerIDOnList";
-            textBoxCustomerIDOnList.ReadOnly = true;
-            textBoxCustomerIDOnList.Size = new Size(231, 27);
-            textBoxCustomerIDOnList.TabIndex = 1;
+            comboBoxCustomerIDOnList.FormattingEnabled = true;
+            comboBoxCustomerIDOnList.Location = new Point(147, 9);
+            comboBoxCustomerIDOnList.Name = "comboBoxCustomerIDOnList";
+            comboBoxCustomerIDOnList.Size = new Size(231, 28);
+            comboBoxCustomerIDOnList.TabIndex = 3;
             // 
             // labelCustomerIDOnList
             // 
@@ -1113,6 +1140,7 @@
             buttonDeleteCustomer.TabIndex = 19;
             buttonDeleteCustomer.Text = "Xóa";
             buttonDeleteCustomer.UseVisualStyleBackColor = true;
+            buttonDeleteCustomer.Click += buttonDeleteCustomer_Click;
             // 
             // labelTitleListCustomer
             // 
@@ -1161,6 +1189,15 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(buttonAddEmployee);
+            tabPage2.Controls.Add(buttonUpdateEmployee);
+            tabPage2.Controls.Add(panelTypeEmployeeOnList);
+            tabPage2.Controls.Add(buttonDeleteEmployee);
+            tabPage2.Controls.Add(panelEmployeeNameOnList);
+            tabPage2.Controls.Add(panelEmployeePhoneOnList);
+            tabPage2.Controls.Add(panelEmployeeIDOnList);
+            tabPage2.Controls.Add(labelTitleListEmployee);
+            tabPage2.Controls.Add(lsvListEmployee);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -1168,6 +1205,181 @@
             tabPage2.TabIndex = 6;
             tabPage2.Text = "Danh sách nhân viên";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddEmployee
+            // 
+            buttonAddEmployee.Location = new Point(717, 592);
+            buttonAddEmployee.Name = "buttonAddEmployee";
+            buttonAddEmployee.Size = new Size(94, 29);
+            buttonAddEmployee.TabIndex = 18;
+            buttonAddEmployee.Text = "Thêm";
+            buttonAddEmployee.UseVisualStyleBackColor = true;
+            buttonAddEmployee.Click += buttonAddEmployee_Click;
+            // 
+            // buttonUpdateEmployee
+            // 
+            buttonUpdateEmployee.Location = new Point(1013, 592);
+            buttonUpdateEmployee.Name = "buttonUpdateEmployee";
+            buttonUpdateEmployee.Size = new Size(94, 29);
+            buttonUpdateEmployee.TabIndex = 17;
+            buttonUpdateEmployee.Text = "Chỉnh sửa";
+            buttonUpdateEmployee.UseVisualStyleBackColor = true;
+            buttonUpdateEmployee.Click += buttonUpdateEmployee_Click;
+            // 
+            // panelTypeEmployeeOnList
+            // 
+            panelTypeEmployeeOnList.Controls.Add(comboBoxTypeEmployeeOnList);
+            panelTypeEmployeeOnList.Controls.Add(labelTypeEmployeeOnList);
+            panelTypeEmployeeOnList.ImeMode = ImeMode.HangulFull;
+            panelTypeEmployeeOnList.Location = new Point(717, 303);
+            panelTypeEmployeeOnList.Name = "panelTypeEmployeeOnList";
+            panelTypeEmployeeOnList.Size = new Size(390, 48);
+            panelTypeEmployeeOnList.TabIndex = 16;
+            // 
+            // comboBoxTypeEmployeeOnList
+            // 
+            comboBoxTypeEmployeeOnList.FormattingEnabled = true;
+            comboBoxTypeEmployeeOnList.Location = new Point(147, 12);
+            comboBoxTypeEmployeeOnList.Name = "comboBoxTypeEmployeeOnList";
+            comboBoxTypeEmployeeOnList.Size = new Size(231, 28);
+            comboBoxTypeEmployeeOnList.TabIndex = 1;
+            // 
+            // labelTypeEmployeeOnList
+            // 
+            labelTypeEmployeeOnList.AutoSize = true;
+            labelTypeEmployeeOnList.Location = new Point(19, 15);
+            labelTypeEmployeeOnList.Name = "labelTypeEmployeeOnList";
+            labelTypeEmployeeOnList.Size = new Size(104, 20);
+            labelTypeEmployeeOnList.TabIndex = 0;
+            labelTypeEmployeeOnList.Text = "Loại nhân viên";
+            // 
+            // buttonDeleteEmployee
+            // 
+            buttonDeleteEmployee.Location = new Point(864, 592);
+            buttonDeleteEmployee.Name = "buttonDeleteEmployee";
+            buttonDeleteEmployee.Size = new Size(94, 29);
+            buttonDeleteEmployee.TabIndex = 14;
+            buttonDeleteEmployee.Text = "Xóa";
+            buttonDeleteEmployee.UseVisualStyleBackColor = true;
+            buttonDeleteEmployee.Click += buttonDeleteEmployee_Click;
+            // 
+            // panelEmployeeNameOnList
+            // 
+            panelEmployeeNameOnList.Controls.Add(comboBoxEmployeeNameOnList);
+            panelEmployeeNameOnList.Controls.Add(labelEmployeeNameOnList);
+            panelEmployeeNameOnList.Location = new Point(717, 150);
+            panelEmployeeNameOnList.Name = "panelEmployeeNameOnList";
+            panelEmployeeNameOnList.Size = new Size(390, 48);
+            panelEmployeeNameOnList.TabIndex = 8;
+            // 
+            // comboBoxEmployeeNameOnList
+            // 
+            comboBoxEmployeeNameOnList.FormattingEnabled = true;
+            comboBoxEmployeeNameOnList.Location = new Point(147, 9);
+            comboBoxEmployeeNameOnList.Name = "comboBoxEmployeeNameOnList";
+            comboBoxEmployeeNameOnList.Size = new Size(231, 28);
+            comboBoxEmployeeNameOnList.TabIndex = 2;
+            // 
+            // labelEmployeeNameOnList
+            // 
+            labelEmployeeNameOnList.AutoSize = true;
+            labelEmployeeNameOnList.Location = new Point(19, 12);
+            labelEmployeeNameOnList.Name = "labelEmployeeNameOnList";
+            labelEmployeeNameOnList.Size = new Size(99, 20);
+            labelEmployeeNameOnList.TabIndex = 0;
+            labelEmployeeNameOnList.Text = "Tên nhân viên";
+            // 
+            // panelEmployeePhoneOnList
+            // 
+            panelEmployeePhoneOnList.Controls.Add(comboBoxEmployeePhoneOnList);
+            panelEmployeePhoneOnList.Controls.Add(labelEmployeePhoneOnList);
+            panelEmployeePhoneOnList.Location = new Point(717, 228);
+            panelEmployeePhoneOnList.Name = "panelEmployeePhoneOnList";
+            panelEmployeePhoneOnList.Size = new Size(390, 48);
+            panelEmployeePhoneOnList.TabIndex = 9;
+            // 
+            // comboBoxEmployeePhoneOnList
+            // 
+            comboBoxEmployeePhoneOnList.FormattingEnabled = true;
+            comboBoxEmployeePhoneOnList.Location = new Point(147, 9);
+            comboBoxEmployeePhoneOnList.Name = "comboBoxEmployeePhoneOnList";
+            comboBoxEmployeePhoneOnList.Size = new Size(231, 28);
+            comboBoxEmployeePhoneOnList.TabIndex = 3;
+            // 
+            // labelEmployeePhoneOnList
+            // 
+            labelEmployeePhoneOnList.AutoSize = true;
+            labelEmployeePhoneOnList.Location = new Point(19, 12);
+            labelEmployeePhoneOnList.Name = "labelEmployeePhoneOnList";
+            labelEmployeePhoneOnList.Size = new Size(97, 20);
+            labelEmployeePhoneOnList.TabIndex = 0;
+            labelEmployeePhoneOnList.Text = "Số điện thoại";
+            // 
+            // panelEmployeeIDOnList
+            // 
+            panelEmployeeIDOnList.Controls.Add(comboBoxEmployeeIDOnList);
+            panelEmployeeIDOnList.Controls.Add(labelEmployeeIDOnList);
+            panelEmployeeIDOnList.Location = new Point(717, 76);
+            panelEmployeeIDOnList.Name = "panelEmployeeIDOnList";
+            panelEmployeeIDOnList.Size = new Size(390, 48);
+            panelEmployeeIDOnList.TabIndex = 7;
+            // 
+            // comboBoxEmployeeIDOnList
+            // 
+            comboBoxEmployeeIDOnList.FormattingEnabled = true;
+            comboBoxEmployeeIDOnList.Location = new Point(147, 9);
+            comboBoxEmployeeIDOnList.Name = "comboBoxEmployeeIDOnList";
+            comboBoxEmployeeIDOnList.Size = new Size(231, 28);
+            comboBoxEmployeeIDOnList.TabIndex = 3;
+            // 
+            // labelEmployeeIDOnList
+            // 
+            labelEmployeeIDOnList.AutoSize = true;
+            labelEmployeeIDOnList.Location = new Point(19, 12);
+            labelEmployeeIDOnList.Name = "labelEmployeeIDOnList";
+            labelEmployeeIDOnList.Size = new Size(91, 20);
+            labelEmployeeIDOnList.TabIndex = 0;
+            labelEmployeeIDOnList.Text = "ID nhân viên";
+            // 
+            // labelTitleListEmployee
+            // 
+            labelTitleListEmployee.AutoSize = true;
+            labelTitleListEmployee.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTitleListEmployee.Location = new Point(21, 25);
+            labelTitleListEmployee.Name = "labelTitleListEmployee";
+            labelTitleListEmployee.Size = new Size(315, 31);
+            labelTitleListEmployee.TabIndex = 6;
+            labelTitleListEmployee.Text = "DANH SÁCH CÁC NHÂN VIÊN";
+            // 
+            // lsvListEmployee
+            // 
+            lsvListEmployee.Columns.AddRange(new ColumnHeader[] { columnHeader16, columnHeader17, columnHeader18, columnHeader19 });
+            lsvListEmployee.ForeColor = SystemColors.Desktop;
+            lsvListEmployee.FullRowSelect = true;
+            lsvListEmployee.GridLines = true;
+            lsvListEmployee.Location = new Point(21, 76);
+            lsvListEmployee.MultiSelect = false;
+            lsvListEmployee.Name = "lsvListEmployee";
+            lsvListEmployee.Size = new Size(674, 555);
+            lsvListEmployee.TabIndex = 5;
+            lsvListEmployee.UseCompatibleStateImageBehavior = false;
+            lsvListEmployee.View = View.Details;
+            lsvListEmployee.SelectedIndexChanged += lsvListEmployee_SelectedIndexChanged;
+            // 
+            // columnHeader17
+            // 
+            columnHeader17.Text = "EmployeeName";
+            columnHeader17.Width = 220;
+            // 
+            // columnHeader18
+            // 
+            columnHeader18.Text = "Phone";
+            columnHeader18.Width = 150;
+            // 
+            // columnHeader19
+            // 
+            columnHeader19.Text = "TypeEmployee";
+            columnHeader19.Width = 180;
             // 
             // FormStoreManager
             // 
@@ -1187,45 +1399,44 @@
             menuStrip1.PerformLayout();
             tabPageListProduct.ResumeLayout(false);
             tabPageListProduct.PerformLayout();
-            panelInputPrice.ResumeLayout(false);
-            panelInputPrice.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numImportPrice).EndInit();
-            panelQuantity.ResumeLayout(false);
-            panelQuantity.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numQuatity).EndInit();
-            panelProductName.ResumeLayout(false);
-            panelProductName.PerformLayout();
-            panelUnit.ResumeLayout(false);
-            panelUnit.PerformLayout();
-            panelPrice.ResumeLayout(false);
-            panelPrice.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numPrice).EndInit();
-            panelProductID.ResumeLayout(false);
-            panelProductID.PerformLayout();
-            tpLookUpOrders.ResumeLayout(false);
+            panelInputPriceOnList.ResumeLayout(false);
+            panelInputPriceOnList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownImportPriceOnList).EndInit();
+            panelQuantityOnList.ResumeLayout(false);
+            panelQuantityOnList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownQuatityOnList).EndInit();
+            panelProductNameOnList.ResumeLayout(false);
+            panelProductNameOnList.PerformLayout();
+            panelUnitOnList.ResumeLayout(false);
+            panelUnitOnList.PerformLayout();
+            panelPriceOnList.ResumeLayout(false);
+            panelPriceOnList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownPriceOnList).EndInit();
+            panelProductIDOnList.ResumeLayout(false);
+            panelProductIDOnList.PerformLayout();
             tpNewBuy.ResumeLayout(false);
             tpNewBuy.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
-            panel9.ResumeLayout(false);
-            panel9.PerformLayout();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            panelTotalAmount.ResumeLayout(false);
+            panelTotalAmount.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownTotalAmount).EndInit();
+            panelOrderDate.ResumeLayout(false);
+            panelOrderDate.PerformLayout();
+            panelQuatity.ResumeLayout(false);
+            panelQuatity.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownQuatity).EndInit();
+            panelPrice.ResumeLayout(false);
+            panelPrice.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownPrice).EndInit();
+            panelProductID.ResumeLayout(false);
+            panelProductID.PerformLayout();
+            panelProductName.ResumeLayout(false);
+            panelProductName.PerformLayout();
+            panelEmployeeID.ResumeLayout(false);
+            panelEmployeeID.PerformLayout();
+            panelEmployeeName.ResumeLayout(false);
+            panelEmployeeName.PerformLayout();
             panelCustomerID.ResumeLayout(false);
             panelCustomerID.PerformLayout();
             panelCustomerName.ResumeLayout(false);
@@ -1244,6 +1455,16 @@
             panelTypeCustomerOnList.PerformLayout();
             panelCustomerIDOnList.ResumeLayout(false);
             panelCustomerIDOnList.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            panelTypeEmployeeOnList.ResumeLayout(false);
+            panelTypeEmployeeOnList.PerformLayout();
+            panelEmployeeNameOnList.ResumeLayout(false);
+            panelEmployeeNameOnList.PerformLayout();
+            panelEmployeePhoneOnList.ResumeLayout(false);
+            panelEmployeePhoneOnList.PerformLayout();
+            panelEmployeeIDOnList.ResumeLayout(false);
+            panelEmployeeIDOnList.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1257,7 +1478,7 @@
         private Label labelCustomers;
         private TabPage tabPageListProduct;
         private Button buttonDeleteProduct;
-        private Label labelTitle;
+        private Label labelTitleListProduct;
         private ListView lsvListProduct;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
@@ -1268,33 +1489,32 @@
         private TabPage tpLookUpOrders;
         private TabPage tpPaying;
         private TabPage tpNewBuy;
-        private Label labelCustomer;
+        private Label labelTitleCustomer;
         private ListView lsvNewOrderDetailList;
-        private Panel panel9;
-        private DateTimePicker dateTimePicker1;
-        private Label label13;
+        private Panel panelOrderDate;
+        private DateTimePicker dateTimePickerOrderDate;
+        private Label labelOrderDate;
         private Label label12;
-        private Panel panel8;
-        private NumericUpDown numericUpDown2;
-        private Label label11;
-        private Button button1;
-        private Panel panel7;
-        private NumericUpDown numericUpDown1;
-        private Label label10;
-        private Label labelProduct;
-        private Panel panel5;
-        private ComboBox comboBox5;
-        private Label label8;
-        private Panel panel6;
-        private ComboBox comboBox6;
-        private Label label9;
-        private Label labelEmployee;
-        private Panel panel3;
-        private ComboBox comboBox3;
-        private Label label3;
-        private Panel panel4;
-        private ComboBox comboBox4;
-        private Label label4;
+        private Panel panelQuatity;
+        private NumericUpDown numericUpDownQuatity;
+        private Label labelQuatity;
+        private Button buttonAddProductIntoOrder;
+        private Panel panelPrice;
+        private Label labelPrice;
+        private Label labelTitleProduct;
+        private Panel panelProductID;
+        private ComboBox comboBoxProductID;
+        private Label labelProductID;
+        private Panel panelProductName;
+        private ComboBox comboBoxProductName;
+        private Label labelProductName;
+        private Label labelTitleEmployee;
+        private Panel panelEmployeeID;
+        private ComboBox comboBoxEmployeeID;
+        private Label labelEmployeeID;
+        private Panel panelEmployeeName;
+        private ComboBox comboBoxEmployeeName;
+        private Label labelEmployeeName;
         private Panel panelCustomerID;
         private ComboBox comboBoxCustomerID;
         private Label labelCustomerID;
@@ -1302,39 +1522,33 @@
         private ComboBox comboBoxCustomerName;
         private Label labelCustomerName;
         private TabControl tpProducts;
-        private Panel panelProductID;
-        private Label labelProductID;
-        private Panel panelProductName;
-        private ComboBox cbProductName;
-        private Label labelProductName;
-        private Panel panelUnit;
-        private ComboBox cbUnit;
-        private Label labelUnit;
-        private Panel panelPrice;
-        private Label labelPrice;
-        private Panel panelInputPrice;
-        private Label labelInputPrice;
-        private Panel panelQuantity;
-        private Label labelQuantity;
-        private NumericUpDown numImportPrice;
-        private NumericUpDown numQuatity;
-        private NumericUpDown numPrice;
+        private Panel panelProductIDOnList;
+        private Label labelProductIDOnList;
+        private Panel panelProductNameOnList;
+        private ComboBox comboBoxProductNameOnList;
+        private Label labelProductNameOnList;
+        private Panel panelUnitOnList;
+        private ComboBox comboBoxUnitOnList;
+        private Label labelUnitOnList;
+        private Panel panelPriceOnList;
+        private Label labelPriceOnList;
+        private Panel panelInputPriceOnList;
+        private Label labelInputPriceOnList;
+        private Panel panelQuantityOnList;
+        private Label labelQuantityOnList;
+        private NumericUpDown numericUpDownImportPriceOnList;
+        private NumericUpDown numericUpDownQuatityOnList;
+        private NumericUpDown numericUpDownPriceOnList;
         private Button buttonUpdateProduct;
         private Button buttonAddProduct;
-        private TextBox textBoxProductID;
-        private ListView listView1;
-        private ColumnHeader columnHeader7;
-        private ColumnHeader columnHeader8;
-        private ColumnHeader columnHeader9;
-        private ColumnHeader columnHeader10;
-        private Panel panel1;
-        private NumericUpDown numericUpDown3;
-        private Label label1;
+        private Panel panelTotalAmount;
+        private NumericUpDown numericUpDownTotalAmount;
+        private Label labelTotalAmount;
         private Panel panel2;
         private ComboBox comboBox1;
         private Label label2;
-        private Button button4;
-        private Button button3;
+        private Button buttonBuy;
+        private Button buttonDeleteProductIntoOrder;
         private Button button2;
         private TabPage tabPage1;
         private TabPage tabPage2;
@@ -1350,10 +1564,8 @@
         private ComboBox comboBoxCustomerPhoneOnList;
         private Label labelCustomerPhoneOnList;
         private Panel panelTypeCustomerOnList;
-        private NumericUpDown numericUpDown6;
         private Label labelTypeCustomerOnList;
         private Panel panelCustomerIDOnList;
-        private TextBox textBoxCustomerIDOnList;
         private Label labelCustomerIDOnList;
         private Button buttonDeleteCustomer;
         private Label labelTitleListCustomer;
@@ -1362,6 +1574,40 @@
         private ColumnHeader columnHeader13;
         private ColumnHeader columnHeader14;
         private ColumnHeader columnHeader15;
-        private TextBox textBoxTypeCustomerOnList;
+        private ComboBox comboBoxTypeCustomerOnList;
+        private Panel panel11;
+        private NumericUpDown numericUpDown4;
+        private Label label7;
+        private Panel panelEmployeeNameOnList;
+        private ComboBox comboBoxEmployeeNameOnList;
+        private Label labelEmployeeNameOnList;
+        private Panel panelEmployeePhoneOnList;
+        private ComboBox comboBoxEmployeePhoneOnList;
+        private Label labelEmployeePhoneOnList;
+        private Panel panel14;
+        private NumericUpDown numericUpDown5;
+        private Label label16;
+        private Panel panelEmployeeIDOnList;
+        private Label labelEmployeeIDOnList;
+        private Label labelTitleListEmployee;
+        private ListView lsvListEmployee;
+        private ColumnHeader columnHeader17;
+        private ColumnHeader columnHeader18;
+        private ColumnHeader columnHeader19;
+        private Button button5;
+        private Button button6;
+        private Button buttonDeleteEmployee;
+        private Panel panelTypeEmployeeOnList;
+        private ComboBox comboBoxTypeEmployeeOnList;
+        private Label labelTypeEmployeeOnList;
+        private Panel panel15;
+        private NumericUpDown numericUpDown6;
+        private Label label17;
+        private Button buttonAddEmployee;
+        private Button buttonUpdateEmployee;
+        private ComboBox comboBoxProductIDOnList;
+        private ComboBox comboBoxCustomerIDOnList;
+        private ComboBox comboBoxEmployeeIDOnList;
+        private NumericUpDown numericUpDownPrice;
     }
 }

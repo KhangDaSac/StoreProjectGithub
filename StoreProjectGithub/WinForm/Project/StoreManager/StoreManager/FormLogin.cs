@@ -79,7 +79,8 @@ namespace StoreManager
 
         private bool login(String loginName, String passwordAcc)
         {
-            return DataProvider.Instance.login(loginName, passwordAcc);
+            return true;
+            //return DataProvider.Instance.login(loginName, passwordAcc);
         }
     }
 }

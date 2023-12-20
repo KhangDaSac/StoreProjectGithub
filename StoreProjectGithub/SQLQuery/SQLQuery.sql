@@ -50,7 +50,7 @@ create table Employees(
 	EmployeeID int not null identity(1,1) primary key,
 	EmployeeName nvarchar(50) not null,
 	Phone nvarchar(11) not null,
-	TypeEmployee nvarchar(10) check(TypeEmployee in ('BH', 'QL')) default 'BH'
+	nvarchar(10) check(TypeEmployee in ('BH', 'QL')) default 'BH'
 )
 go
 
@@ -116,7 +116,7 @@ begin
 	select * from Products
 end
 go
-
+--get Customer list
 create proc USP_GetCustomerList
 as
 begin
@@ -124,6 +124,13 @@ begin
 end
 go
 
+--Get Employee list
+create proc USP_GetEmployeeList
+as
+begin
+	select * from Employees
+end
+go 
 --Stored procedure, DeleteProductById
 create proc USP_DeleteProductById
 @ProductID int
@@ -177,6 +184,24 @@ begin
 end
 go
 
+--insert value into Employee
+create proc USP_InsertValueIntoEmployees
+@EmployeeName nvarchar(50),
+@Phone nvarchar(11),
+@TypeEmployee nvarchar(10)
+as
+begin
+	insert into Employees (
+	EmployeeName,
+	Phone,
+	TypeEmployee)
+	values(
+	@EmployeeName,
+	@Phone,
+	@TypeEmployee)
+end
+go
+
 --Update value form Product
 create proc USP_UpdateValueFormProduct
 @ProductID int,
@@ -196,6 +221,7 @@ begin
 	where ProductID = @ProductID
 end
 go
+
 select * from Products
 exec USP_UpdateValueFormProduct 
 @ProductID = 15,
@@ -254,7 +280,58 @@ begin
 end
 go
 
-exec USP_SortTableProductBy
+-- Delete Customer by ID
+create proc USP_DeleteCustomerById
+@CustomerID int
+as
+begin
+	delete from Customers where CustomerID = @CustomerID
+end
+go
+
+-- Delete Employee by ID
+create proc USP_DeleteEmployeeById
+@EmployeeID int
+as
+begin
+	delete from Employees where EmployeeID = @EmployeeID
+end
+go
+
+--Update value form Customers table
+create proc USP_UpdateValueFormCustomer
+@CustomerID int,
+@CustomerName nvarchar(50),
+@Phone nvarchar(11),
+@TypeCustomer nvarchar(10),
+@Debt float 
+as
+begin
+	update Customers set
+	CustomerName = @CustomerName,
+	Phone = @Phone,
+	TypeCustomer = @TypeCustomer,
+	Debt = @Debt
+	where CustomerID = @CustomerID
+end
+go
+
+--Update value form Employee table
+create proc USP_UpdateValueFormEmployee
+@EmployeeID int,
+@EmployeeName nvarchar(50),
+@Phone nvarchar(11),
+@TypeEmployee nvarchar(10)
+as
+begin
+	update Employees set
+	EmployeeName = @EmployeeName,
+	Phone = @Phone,
+	TypeEmployee = @TypeEmployee
+	where EmployeeID = @EmployeeID
+end
+go
+
 
 --Insert values into tables
 --Insert values into Accounts
@@ -321,6 +398,16 @@ values (
 	N'0339165536',
 	N'VIP',
 	0)
+go
+--insert into Employee
+insert into Employees(
+	EmployeeName,
+	Phone,
+	TypeEmployee)
+values (
+	N'Khang',
+	N'0928089095',
+	N'QL')
 go
 
 
