@@ -21,6 +21,8 @@ namespace StoreManager
         private static List<Product> productList = new List<Product>();
         private static List<Customer> customerList = new List<Customer>();
         private static List<Employee> employeeList = new List<Employee>();
+        private static List<OrderDetail> newOrderDetailList = new List<OrderDetail>();
+        private static List<Order> orderList = new List<Order>();
 
         #endregion
         public FormStoreManager()
@@ -29,12 +31,12 @@ namespace StoreManager
             loadListProduct();
             loadListCustomer();
             loadListEmployee();
+            loadListOrder();
             loadToolBoxListCustomer();
             loadToolBoxListEmployee();
             loadToolBoxListProduct();
+            loadOtherToolBox();
         }
-
-
 
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -65,6 +67,22 @@ namespace StoreManager
 
         }
 
+        private void buttonAddProduct_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có thực sự muốn thêm sán phẩm này?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                Product product = new Product(
+                    comboBoxProductNameOnList.Text,
+                    comboBoxUnitOnList.Text,
+                    (double)numericUpDownPriceOnList.Value,
+                    (double)numericUpDownImportPriceOnList.Value,
+                    (int)numericUpDownQuatityOnList.Value);
+                ProductDAO.Instance.addProduct(product);
+
+                loadListProduct();
+            }
+        }
+
         private void buttonDeleteProduct_Click(object sender, EventArgs e)
         {
             if (lsvListProduct.SelectedItems.Count > 0)
@@ -73,9 +91,30 @@ namespace StoreManager
                 {
                     String idProductDeleteStr = lsvListProduct.SelectedItems[0].SubItems[0].Text;
                     int idProductDelete = int.Parse(idProductDeleteStr);
-                    String query = "exec USP_DeleteProductById @ProductID";
+                    ProductDAO.Instance.deleteProductByID(idProductDelete);
+                    loadListProduct();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn 1 sản phẩm", "Thông báo");
+            }
+        }
 
-                    DataProvider.Instance.ExecuteQuery(query, new Object[] { idProductDelete });
+        private void buttonUpdateProduct_Click(object sender, EventArgs e)
+        {
+            if (lsvListProduct.SelectedItems.Count > 0)
+            {
+                if (MessageBox.Show("Bạn có thực sự muốn chỉnh sửa sán phẩm này?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                {
+                    Product product = new Product(
+                        int.Parse(comboBoxProductIDOnList.Text),
+                        comboBoxProductNameOnList.Text,
+                        comboBoxUnitOnList.Text,
+                        (double)numericUpDownPriceOnList.Value,
+                        (double)numericUpDownImportPriceOnList.Value,
+                        (int)numericUpDownQuatityOnList.Value);
+                    ProductDAO.Instance.updateProduct(product);
                     loadListProduct();
                 }
             }
@@ -97,45 +136,6 @@ namespace StoreManager
                 numericUpDownPriceOnList.Value = (int)product.Price;
                 numericUpDownImportPriceOnList.Value = (int)product.ImportPrice;
                 numericUpDownQuatityOnList.Value = product.QuantityOnHand;
-            }
-        }
-
-        private void buttonAddProduct_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có thực sự muốn thêm sán phẩm này?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
-            {
-                String query = "exec USP_InsertValueIntoProducts @ProductName , @Unit , @Price , @ImportPrice , @QuantityOnHand";
-
-                DataProvider.Instance.ExecuteQuery(query, new Object[] {
-                    comboBoxProductNameOnList.Text,
-                    comboBoxUnitOnList.Text,
-                    numericUpDownPriceOnList.Value,
-                    numericUpDownImportPriceOnList.Value,
-                    numericUpDownQuatityOnList.Value });
-                loadListProduct();
-            }
-        }
-
-        private void buttonUpdateProduct_Click(object sender, EventArgs e)
-        {
-            if (lsvListProduct.SelectedItems.Count > 0)
-            {
-                if (MessageBox.Show("Bạn có thực sự muốn chỉnh sửa sán phẩm này?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
-                {
-                    String query = "exec USP_UpdateValueFormProduct @ProductID , @ProductName , @Unit , @Price , @ImportPrice , @QuantityOnHand";
-                    DataProvider.Instance.ExecuteQuery(query, new Object[] {
-                        comboBoxProductIDOnList.Text,
-                        comboBoxProductNameOnList.Text,
-                        comboBoxUnitOnList.Text,
-                        numericUpDownPriceOnList.Value,
-                        numericUpDownImportPriceOnList.Value,
-                        numericUpDownQuatityOnList.Value });
-                    loadListProduct();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn 1 sản phẩm", "Thông báo");
             }
         }
 
@@ -189,13 +189,13 @@ namespace StoreManager
         {
             if (MessageBox.Show("Bạn có thực sự muốn thêm khách hàng này?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
-                String query = "exec USP_InsertValueIntoCustomers @CustomerName , @Phone , @TypeCustomer , @Debt";
 
-                DataProvider.Instance.ExecuteQuery(query, new Object[] {
+                Customer customer = new Customer(
                     comboBoxCustomerNameOnList.Text,
                     comboBoxCustomerPhoneOnList.Text,
                     comboBoxTypeCustomerOnList.Text,
-                    numDebtOnList.Value});
+                    (double)numDebtOnList.Value);
+                CustomerDAO.Instance.addCustomer(customer);
                 loadListCustomer();
             }
         }
@@ -208,9 +208,9 @@ namespace StoreManager
                 {
                     String idCustomerDeleteStr = lsvListCustomer.SelectedItems[0].SubItems[0].Text;
                     int idCustomerDelete = int.Parse(idCustomerDeleteStr);
-                    String query = "exec USP_DeleteCustomerById @CustomerID";
 
-                    DataProvider.Instance.ExecuteQuery(query, new Object[] { idCustomerDelete });
+                    CustomerDAO.Instance.deleteCustomerByID(idCustomerDelete);
+
                     loadListCustomer();
                 }
             }
@@ -226,13 +226,16 @@ namespace StoreManager
             {
                 if (MessageBox.Show("Bạn có thực sự muốn chỉnh sửa thông tin khách hàng này?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
-                    String query = "exec USP_UpdateValueFormCustomer @CustomerID , @CustomerName , @Phone , @TypeCustomer , @Debt ";
-                    DataProvider.Instance.ExecuteQuery(query, new Object[] {
-                        comboBoxCustomerIDOnList.Text,
+
+                    Customer customer = new Customer(
+                        int.Parse(comboBoxCustomerIDOnList.Text),
                         comboBoxCustomerNameOnList.Text,
                         comboBoxCustomerPhoneOnList.Text,
                         comboBoxTypeCustomerOnList.Text,
-                        numDebtOnList.Value,});
+                        (double)numDebtOnList.Value);
+
+                    CustomerDAO.Instance.updateCustomer(customer);
+
                     loadListCustomer();
                 }
             }
@@ -268,9 +271,9 @@ namespace StoreManager
                 ListViewItem item = lsvListEmployee.SelectedItems[0];
                 Employee employee = EmployeeDAO.Instance.getEmployeeByID(employeeList, int.Parse(item.SubItems[0].Text));
                 comboBoxEmployeeIDOnList.Text = employee.EmployeeID.ToString();
-                comboBoxEmployeeNameOnList.Text = employee.EmployeeName.ToString();
-                comboBoxEmployeePhoneOnList.Text = employee.Phone.ToString();
-                comboBoxTypeEmployeeOnList.Text = employee.TypeEmployee.ToString();
+                comboBoxEmployeeNameOnList.Text = employee.EmployeeName;
+                comboBoxEmployeePhoneOnList.Text = employee.Phone;
+                comboBoxTypeEmployeeOnList.Text = employee.TypeEmployee;
             }
         }
 
@@ -278,12 +281,15 @@ namespace StoreManager
         {
             if (MessageBox.Show("Bạn có thực sự muốn thêm nhân viên này?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
-                String query = "exec USP_InsertValueIntoEmployees @EmployeeName , @Phone , @TypeEmployee";
 
-                DataProvider.Instance.ExecuteQuery(query, new Object[] {
+
+                Employee employee = new Employee(
                     comboBoxEmployeeNameOnList.Text,
                     comboBoxEmployeePhoneOnList.Text,
-                    comboBoxTypeEmployeeOnList.Text});
+                    comboBoxTypeEmployeeOnList.Text);
+
+                EmployeeDAO.Instance.addEmployee(employee);
+
                 loadListEmployee();
             }
         }
@@ -296,9 +302,9 @@ namespace StoreManager
                 {
                     String idEmployeeDeleteStr = lsvListEmployee.SelectedItems[0].SubItems[0].Text;
                     int idEmployeeDelete = int.Parse(idEmployeeDeleteStr);
-                    String query = "exec USP_DeleteEmployeeById @EmployeeID";
 
-                    DataProvider.Instance.ExecuteQuery(query, new Object[] { idEmployeeDelete });
+                    EmployeeDAO.Instance.deteleEmployeeByID(idEmployeeDelete);
+
                     loadListEmployee();
                 }
             }
@@ -314,12 +320,13 @@ namespace StoreManager
             {
                 if (MessageBox.Show("Bạn có thực sự muốn chỉnh sửa thông tin nhân viên này?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
-                    String query = "exec USP_UpdateValueFormEmployee @EmployeeID , @EmployeeName , @Phone , @TypeEmployee";
-                    DataProvider.Instance.ExecuteQuery(query, new Object[] {
-                        comboBoxEmployeeIDOnList.Text,
+                    Employee employee = new Employee(
+                        int.Parse(comboBoxEmployeeIDOnList.Text),
                         comboBoxEmployeeNameOnList.Text,
                         comboBoxEmployeePhoneOnList.Text,
-                        comboBoxTypeEmployeeOnList.Text});
+                        comboBoxTypeEmployeeOnList.Text);
+                    EmployeeDAO.Instance.updateEmployee(employee);
+
                     loadListEmployee();
                 }
             }
@@ -331,15 +338,62 @@ namespace StoreManager
 
         #endregion
 
+        #region Method of list OrderDislay
+
+        private void loadListOrder(DataTable data = null)
+        {
+            orderList = OrderDAO.Instance.loadListOrder(data);
+            lsvListOrder.Items.Clear();
+            foreach (Order orderDisplay in orderList)
+            {
+                ListViewItem lsvItem = new ListViewItem(orderDisplay.OrderID.ToString());
+                lsvItem.SubItems.Add(orderDisplay.CustomerID.ToString());
+                lsvItem.SubItems.Add(orderDisplay.CustomerName);
+                lsvItem.SubItems.Add(orderDisplay.EmployeeID.ToString());
+                lsvItem.SubItems.Add(orderDisplay.EmployeeName);
+                lsvItem.SubItems.Add(orderDisplay.OrderDate.ToString());
+                lsvItem.SubItems.Add(FormatMoney.Instance.transformFormat(orderDisplay.Amount));
+                lsvItem.SubItems.Add(orderDisplay.PaymentMethod);
+
+                lsvListOrder.Items.Add(lsvItem);
+            }
+
+        }
+
+
+        private void buttonSeeOrderDetail_Click(object sender, EventArgs e)
+        {
+            if (lsvListOrder.SelectedItems.Count > 0)
+            {
+                String idOrderStr = lsvListOrder.SelectedItems[0].SubItems[0].Text;
+                int idOrder = int.Parse(idOrderStr);
+
+                FormOrderDetail orderDetail = new FormOrderDetail(idOrder);
+                orderDetail.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn 1 sản phẩm", "Thông báo");
+            }
+        }
+
+        #endregion
+
         #region Method new buy
         private void loadToolBoxListCustomer()
         {
             //On buy
-            comboBoxCustomerID.DataSource = customerList;
+            List<Customer> customerListCopy = new List<Customer>();
+            foreach (Customer customer in customerList)
+            {
+                customerListCopy.Add(customer);
+            }
+
+            comboBoxCustomerID.DataSource = customerListCopy;
             comboBoxCustomerID.DisplayMember = "CustomerID";
             comboBoxCustomerID.SelectedIndex = -1;
 
-            comboBoxCustomerName.DataSource = customerList;
+            comboBoxCustomerName.DataSource = customerListCopy;
             comboBoxCustomerName.DisplayMember = "CustomerName";
             comboBoxCustomerName.SelectedIndex = -1;
 
@@ -364,11 +418,17 @@ namespace StoreManager
         private void loadToolBoxListEmployee()
         {
             //On buy
-            comboBoxEmployeeID.DataSource = employeeList;
+            List<Employee> employeeListCopy = new List<Employee>();
+            foreach (Employee employee in employeeList)
+            {
+                employeeListCopy.Add(employee);
+            }
+
+            comboBoxEmployeeID.DataSource = employeeListCopy;
             comboBoxEmployeeID.DisplayMember = "EmployeeID";
             comboBoxEmployeeID.SelectedIndex = -1;
 
-            comboBoxEmployeeName.DataSource = employeeList;
+            comboBoxEmployeeName.DataSource = employeeListCopy;
             comboBoxEmployeeName.DisplayMember = "EmployeeName";
             comboBoxEmployeeName.SelectedIndex = -1;
 
@@ -393,11 +453,17 @@ namespace StoreManager
         private void loadToolBoxListProduct()
         {
             //On buy
-            comboBoxProductID.DataSource = productList;
+            List<Product> productListCopy = new List<Product>();
+            foreach (Product product in productList)
+            {
+                productListCopy.Add(product);
+            }
+
+            comboBoxProductID.DataSource = productListCopy;
             comboBoxProductID.DisplayMember = "ProductID";
             comboBoxProductID.SelectedIndex = -1;
 
-            comboBoxProductName.DataSource = productList;
+            comboBoxProductName.DataSource = productListCopy;
             comboBoxProductName.DisplayMember = "ProductName";
             comboBoxProductName.SelectedIndex = -1;
 
@@ -411,8 +477,13 @@ namespace StoreManager
             comboBoxProductNameOnList.DataSource = productList;
             comboBoxProductNameOnList.DisplayMember = "ProductName";
             comboBoxProductNameOnList.SelectedIndex = -1;
+        }
 
-
+        private void loadOtherToolBox()
+        {
+            List<String> list = new List<String>() { "Tiền mặt", "Momo", "Ngân hàng", "Ghi nợ" };
+            comboBoxPaymentMethod.DataSource = list;
+            comboBoxPaymentMethod.SelectedIndex = -1;
         }
 
         private void comboBoxProductID_SelectedIndexChanged(object sender, EventArgs e)
@@ -424,8 +495,79 @@ namespace StoreManager
             }
         }
 
+        private void loadOrderDetail()
+        {
+            lsvNewListOrderDetail.Items.Clear();
+            foreach (OrderDetail orderDetail in newOrderDetailList)
+            {
+
+                ListViewItem lsvItem = new ListViewItem(orderDetail.ProductName);
+
+                lsvItem.SubItems.Add(FormatMoney.Instance.transformFormat(orderDetail.Price));
+                lsvItem.SubItems.Add(orderDetail.Quantity.ToString());
+                lsvItem.SubItems.Add(FormatMoney.Instance.transformFormat(orderDetail.Charge));
+                lsvNewListOrderDetail.Items.Add(lsvItem);
+                loadTotalAmount();
+            }
+        }
+
+        private void buttonAddProductIntoOrder_Click(object sender, EventArgs e)
+        {
+            OrderDetail orderDetail = new OrderDetail(
+                int.Parse(comboBoxProductID.Text),
+                comboBoxProductName.Text,
+                (double)numericUpDownPrice.Value,
+                (int)numericUpDownQuatity.Value);
+            newOrderDetailList.Add(orderDetail);
+
+            loadOrderDetail();
+        }
+
+        private void buttonDeleteProductIntoOrder_Click(object sender, EventArgs e)
+        {
+            if (lsvNewListOrderDetail.SelectedItems.Count > 0)
+            {
+                int index = lsvNewListOrderDetail.SelectedIndices[0];
+                newOrderDetailList.RemoveAt(index);
+                loadOrderDetail();
+            }
+        }
+
+        private void loadTotalAmount()
+        {
+            double totalAmount = 0;
+            foreach (OrderDetail orderDetail in newOrderDetailList)
+            {
+                totalAmount += orderDetail.Charge;
+            }
+            numericUpDownTotalAmount.Value = (int)totalAmount;
+        }
+
+        private void buttonBuy_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có thực sự muốn mua đơn hàng này?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                Order order = new Order(
+                int.Parse(comboBoxCustomerID.Text),
+                int.Parse(comboBoxEmployeeID.Text),
+                dateTimePickerOrderDate.Value,
+                (double)numericUpDownTotalAmount.Value,
+                comboBoxPaymentMethod.Text);
+
+                OrderDAO.Instance.addOrder(order);
+                loadListOrder();
+            }
+
+                
+        }
         #endregion
         #endregion
+
+
+
+
+
+
 
 
 

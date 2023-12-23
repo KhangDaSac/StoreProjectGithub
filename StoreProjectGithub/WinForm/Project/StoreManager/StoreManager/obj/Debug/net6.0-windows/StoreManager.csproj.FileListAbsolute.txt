@@ -50,3 +50,4 @@ D:\StoreProject\StoreProjectGithub\WinForm\Project\StoreManager\StoreManager\obj
 D:\StoreProject\StoreProjectGithub\WinForm\Project\StoreManager\StoreManager\obj\Debug\net6.0-windows\StoreManager.pdb
 D:\StoreProject\StoreProjectGithub\WinForm\Project\StoreManager\StoreManager\obj\Debug\net6.0-windows\StoreManager.genruntimeconfig.cache
 D:\StoreProject\StoreProjectGithub\WinForm\Project\StoreManager\StoreManager\obj\Debug\net6.0-windows\ref\StoreManager.dll
+D:\StoreProject\StoreProjectGithub\WinForm\Project\StoreManager\StoreManager\obj\Debug\net6.0-windows\StoreManager.FormOrderDetail.resources

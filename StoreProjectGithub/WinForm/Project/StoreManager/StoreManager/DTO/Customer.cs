@@ -30,6 +30,13 @@ namespace StoreManager.DTO
             this.TypeCustomer = typeCustomer;
             this.Debt = debt;
         }
+        public Customer(string customerName, string phone, string typeCustomer, double debt)
+        {
+            this.CustomerName = customerName;
+            this.Phone = phone;
+            this.TypeCustomer = typeCustomer;
+            this.Debt = debt;
+        }
 
         public Customer(DataRow row)
         {

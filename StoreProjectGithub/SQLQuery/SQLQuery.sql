@@ -202,6 +202,31 @@ begin
 end
 go
 
+--insert value into Orders
+create proc USP_InsertValueIntoOrders
+@CustomerID int,
+@EmployeeID int,
+@OrderDate DateTime,
+@Amount float,
+@PaymentMethod
+as
+begin
+	insert into Orders (
+	CustomerID,
+	EmployeeID,
+	OrderDate,
+	Amount,
+	PaymentMethod)
+	values(
+	@CustomerID,
+	@EmployeeID,
+	@OrderDate,
+	@Amount,
+	@PaymentMethod)
+end
+go
+
+
 --Update value form Product
 create proc USP_UpdateValueFormProduct
 @ProductID int,
@@ -331,8 +356,20 @@ begin
 	where EmployeeID = @EmployeeID
 end
 go
+--Stored procedure, USP_GetListOrderDetialByOrdeID
+create proc USP_GetListOrderDetialByOrderID
+@OrderID int
+as
+begin
+	select od.OrderDetailID, o.OrderID, p.ProductID, p.ProductName, p.Unit, p.Price, od.Quantity
+	from Orders o join OrderDetails od on o.OrderID = od.OrderID join Products p on od.ProductID = p.ProductID
+	where o.OrderID = @OrderID
+end
+go
 
+DROP PROC USP_GetListOrderDetialByOrderID
 
+exec USP_GetListOrderDetialByOrderID @OrderID = 1
 --Insert values into tables
 --Insert values into Accounts
 insert into Accounts (
@@ -425,9 +462,38 @@ exec USP_Login @LoginName = N'Khang', @PasswordAcc = '123'
 exec USP_DeleteProductById @ProductID = 7
 
 select * from Customers 
+select * from employees 
 
 select * from Accounts where LoginName = '' or 1=1--' and PasswordAcc = '123' 
 
 
 
 select * from Products order by ProductName
+
+select o.OrderID , o.CustomerID, c.CustomerName, o.EmployeeID, e.EmployeeName, o.OrderDate, o.Amount, o.PaymentMethod
+from Orders o join Employees e on o.EmployeeID = e.EmployeeID join Customers c on o.CustomerID = c.CustomerID
+
+insert into Orders(
+	CustomerID,
+	EmployeeID,
+	OrderDate,
+	Amount,
+	PaymentMethod)
+values(
+	4,
+	7,
+	'2023-12-23',
+	10000,
+	N'Tiền mặt')
+select * from Orders
+insert into OrderDetails(
+	OrderID,
+	ProductID,
+	Quantity)
+values(
+	1,
+	25,
+	6)
+select od.OrderDetailID, o.OrderID, p.ProductID, p.ProductName, p.Price, od.Quantity
+from Orders o join OrderDetails od on o.OrderID = od.OrderID join Products p on od.ProductID = p.ProductID
+where o.OrderID = 

@@ -25,6 +25,15 @@ namespace StoreManager.DTO
             this.QuantityOnHand = quantityOnHand;
         }
 
+        public Product(String productName, String unit, double price, double importPrice, int quantityOnHand)
+        {
+            this.ProductName = productName;
+            this.Unit = unit;
+            this.Price = price;
+            this.ImportPrice = importPrice;
+            this.QuantityOnHand = quantityOnHand;
+        }
+
         public Product(DataRow row)
         {
             this.ProductID = (int)row["ProductID"];

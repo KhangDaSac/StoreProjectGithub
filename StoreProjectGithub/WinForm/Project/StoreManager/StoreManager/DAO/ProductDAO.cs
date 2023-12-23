@@ -56,5 +56,38 @@ namespace StoreManager.DAO
             }
             return null;
         }
+
+        public void addProduct(Product product)
+        {
+            String query = "exec USP_InsertValueIntoProducts @ProductName , @Unit , @Price , @ImportPrice , @QuantityOnHand";
+
+            DataProvider.Instance.ExecuteQuery(query, new Object[] {
+                    product.ProductName,
+                    product.Unit,
+                    product.Price,
+                    product.ImportPrice,
+                    product.QuantityOnHand});
+        }
+
+        public void deleteProductByID(int productID)
+        {
+            String query = "exec USP_DeleteProductById @ProductID";
+
+            DataProvider.Instance.ExecuteQuery(query, new Object[] { productID });
+        }
+
+        public void updateProduct(Product product)
+        {
+            String query = "exec USP_UpdateValueFormProduct @ProductID , @ProductName , @Unit , @Price , @ImportPrice , @QuantityOnHand";
+            DataProvider.Instance.ExecuteQuery(query, new Object[] {
+                    product.ProductID,
+                    product.ProductName,
+                    product.Unit,
+                    product.Price,
+                    product.ImportPrice,
+                    product.QuantityOnHand});
+        }
+
+
     }
 }

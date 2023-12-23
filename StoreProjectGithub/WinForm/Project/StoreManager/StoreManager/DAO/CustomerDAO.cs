@@ -54,5 +54,34 @@ namespace StoreManager.DAO
             }
             return null;
         }
+
+        public void addCustomer(Customer customer)
+        {
+            String query = "exec USP_InsertValueIntoCustomers @CustomerName , @Phone , @TypeCustomer , @Debt";
+
+            DataProvider.Instance.ExecuteQuery(query, new Object[] {
+                    customer.CustomerName,
+                    customer.Phone,
+                    customer.TypeCustomer,
+                    customer.Debt});
+        }
+
+        public void deleteCustomerByID(int customerID) 
+        {
+            String query = "exec USP_DeleteCustomerById @CustomerID";
+
+            DataProvider.Instance.ExecuteQuery(query, new Object[] { customerID });
+        }
+
+        public void updateCustomer(Customer customer)
+        {
+            String query = "exec USP_UpdateValueFormCustomer @CustomerID , @CustomerName , @Phone , @TypeCustomer , @Debt ";
+            DataProvider.Instance.ExecuteQuery(query, new Object[] {
+                        customer.CustomerID,
+                        customer.CustomerName,
+                        customer.Phone,
+                        customer.TypeCustomer,
+                        customer.Debt});
+        }
     }
 }

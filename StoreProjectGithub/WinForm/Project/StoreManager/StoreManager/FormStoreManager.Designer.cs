@@ -28,14 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ColumnHeader columnHeader1;
-            ColumnHeader columnHeader11;
             ColumnHeader columnHeader16;
+            ColumnHeader columnHeader11;
+            ColumnHeader columnHeader1;
+            ColumnHeader columnHeader20;
             menuStrip1 = new MenuStrip();
             tàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
             thôngTinTàiKhoảnToolStripMenuItem = new ToolStripMenuItem();
             đăngXuấtToolStripMenuItem = new ToolStripMenuItem();
             adminToolStripMenuItem = new ToolStripMenuItem();
+            tabPage2 = new TabPage();
+            buttonAddEmployee = new Button();
+            buttonUpdateEmployee = new Button();
+            panelTypeEmployeeOnList = new Panel();
+            comboBoxTypeEmployeeOnList = new ComboBox();
+            labelTypeEmployeeOnList = new Label();
+            buttonDeleteEmployee = new Button();
+            panelEmployeeNameOnList = new Panel();
+            comboBoxEmployeeNameOnList = new ComboBox();
+            labelEmployeeNameOnList = new Label();
+            panelEmployeePhoneOnList = new Panel();
+            comboBoxEmployeePhoneOnList = new ComboBox();
+            labelEmployeePhoneOnList = new Label();
+            panelEmployeeIDOnList = new Panel();
+            comboBoxEmployeeIDOnList = new ComboBox();
+            labelEmployeeIDOnList = new Label();
+            labelTitleListEmployee = new Label();
+            lsvListEmployee = new ListView();
+            columnHeader17 = new ColumnHeader();
+            columnHeader18 = new ColumnHeader();
+            columnHeader19 = new ColumnHeader();
+            tabPage1 = new TabPage();
+            buttonUpdateCustomer = new Button();
+            buttonAddCustomer = new Button();
+            panelDebtOnList = new Panel();
+            numDebtOnList = new NumericUpDown();
+            labelDebtOnList = new Label();
+            panelCustomerNameOnList = new Panel();
+            comboBoxCustomerNameOnList = new ComboBox();
+            labelCustomerNameOnList = new Label();
+            panelCustomerPhoneOnList = new Panel();
+            comboBoxCustomerPhoneOnList = new ComboBox();
+            labelCustomerPhoneOnList = new Label();
+            panelTypeCustomerOnList = new Panel();
+            comboBoxTypeCustomerOnList = new ComboBox();
+            labelTypeCustomerOnList = new Label();
+            panelCustomerIDOnList = new Panel();
+            comboBoxCustomerIDOnList = new ComboBox();
+            labelCustomerIDOnList = new Label();
+            buttonDeleteCustomer = new Button();
+            labelTitleListCustomer = new Label();
+            lsvListCustomer = new ListView();
+            columnHeader12 = new ColumnHeader();
+            columnHeader13 = new ColumnHeader();
+            columnHeader14 = new ColumnHeader();
+            columnHeader15 = new ColumnHeader();
             tabPageListProduct = new TabPage();
             buttonUpdateProduct = new Button();
             buttonAddProduct = new Button();
@@ -66,19 +113,31 @@
             columnHeader5 = new ColumnHeader();
             columnHeader6 = new ColumnHeader();
             tpLookUpOrders = new TabPage();
-            tpPaying = new TabPage();
+            buttonSeeOrderDetail = new Button();
+            labelTitleListOrder = new Label();
+            lsvListOrder = new ListView();
+            columnHeader21 = new ColumnHeader();
+            columnHeader22 = new ColumnHeader();
+            columnHeader23 = new ColumnHeader();
+            columnHeader24 = new ColumnHeader();
+            columnHeader25 = new ColumnHeader();
+            columnHeader26 = new ColumnHeader();
+            columnHeader27 = new ColumnHeader();
             tpNewBuy = new TabPage();
             panel2 = new Panel();
-            comboBox1 = new ComboBox();
+            comboBoxPaymentMethod = new ComboBox();
             label2 = new Label();
             buttonBuy = new Button();
             buttonDeleteProductIntoOrder = new Button();
-            button2 = new Button();
             panelTotalAmount = new Panel();
             numericUpDownTotalAmount = new NumericUpDown();
             labelTotalAmount = new Label();
             labelTitleCustomer = new Label();
-            lsvNewOrderDetailList = new ListView();
+            lsvNewListOrderDetail = new ListView();
+            columnHeader7 = new ColumnHeader();
+            columnHeader8 = new ColumnHeader();
+            columnHeader9 = new ColumnHeader();
+            columnHeader10 = new ColumnHeader();
             panelOrderDate = new Panel();
             dateTimePickerOrderDate = new DateTimePicker();
             labelOrderDate = new Label();
@@ -111,56 +170,23 @@
             comboBoxCustomerName = new ComboBox();
             labelCustomerName = new Label();
             tpProducts = new TabControl();
-            tabPage1 = new TabPage();
-            buttonUpdateCustomer = new Button();
-            buttonAddCustomer = new Button();
-            panelDebtOnList = new Panel();
-            numDebtOnList = new NumericUpDown();
-            labelDebtOnList = new Label();
-            panelCustomerNameOnList = new Panel();
-            comboBoxCustomerNameOnList = new ComboBox();
-            labelCustomerNameOnList = new Label();
-            panelCustomerPhoneOnList = new Panel();
-            comboBoxCustomerPhoneOnList = new ComboBox();
-            labelCustomerPhoneOnList = new Label();
-            panelTypeCustomerOnList = new Panel();
-            comboBoxTypeCustomerOnList = new ComboBox();
-            labelTypeCustomerOnList = new Label();
-            panelCustomerIDOnList = new Panel();
-            comboBoxCustomerIDOnList = new ComboBox();
-            labelCustomerIDOnList = new Label();
-            buttonDeleteCustomer = new Button();
-            labelTitleListCustomer = new Label();
-            lsvListCustomer = new ListView();
-            columnHeader12 = new ColumnHeader();
-            columnHeader13 = new ColumnHeader();
-            columnHeader14 = new ColumnHeader();
-            columnHeader15 = new ColumnHeader();
-            tabPage2 = new TabPage();
-            buttonAddEmployee = new Button();
-            buttonUpdateEmployee = new Button();
-            panelTypeEmployeeOnList = new Panel();
-            comboBoxTypeEmployeeOnList = new ComboBox();
-            labelTypeEmployeeOnList = new Label();
-            buttonDeleteEmployee = new Button();
-            panelEmployeeNameOnList = new Panel();
-            comboBoxEmployeeNameOnList = new ComboBox();
-            labelEmployeeNameOnList = new Label();
-            panelEmployeePhoneOnList = new Panel();
-            comboBoxEmployeePhoneOnList = new ComboBox();
-            labelEmployeePhoneOnList = new Label();
-            panelEmployeeIDOnList = new Panel();
-            comboBoxEmployeeIDOnList = new ComboBox();
-            labelEmployeeIDOnList = new Label();
-            labelTitleListEmployee = new Label();
-            lsvListEmployee = new ListView();
-            columnHeader17 = new ColumnHeader();
-            columnHeader18 = new ColumnHeader();
-            columnHeader19 = new ColumnHeader();
-            columnHeader1 = new ColumnHeader();
-            columnHeader11 = new ColumnHeader();
             columnHeader16 = new ColumnHeader();
+            columnHeader11 = new ColumnHeader();
+            columnHeader1 = new ColumnHeader();
+            columnHeader20 = new ColumnHeader();
             menuStrip1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            panelTypeEmployeeOnList.SuspendLayout();
+            panelEmployeeNameOnList.SuspendLayout();
+            panelEmployeePhoneOnList.SuspendLayout();
+            panelEmployeeIDOnList.SuspendLayout();
+            tabPage1.SuspendLayout();
+            panelDebtOnList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numDebtOnList).BeginInit();
+            panelCustomerNameOnList.SuspendLayout();
+            panelCustomerPhoneOnList.SuspendLayout();
+            panelTypeCustomerOnList.SuspendLayout();
+            panelCustomerIDOnList.SuspendLayout();
             tabPageListProduct.SuspendLayout();
             panelInputPriceOnList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDownImportPriceOnList).BeginInit();
@@ -171,6 +197,7 @@
             panelPriceOnList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDownPriceOnList).BeginInit();
             panelProductIDOnList.SuspendLayout();
+            tpLookUpOrders.SuspendLayout();
             tpNewBuy.SuspendLayout();
             panel2.SuspendLayout();
             panelTotalAmount.SuspendLayout();
@@ -187,34 +214,27 @@
             panelCustomerID.SuspendLayout();
             panelCustomerName.SuspendLayout();
             tpProducts.SuspendLayout();
-            tabPage1.SuspendLayout();
-            panelDebtOnList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numDebtOnList).BeginInit();
-            panelCustomerNameOnList.SuspendLayout();
-            panelCustomerPhoneOnList.SuspendLayout();
-            panelTypeCustomerOnList.SuspendLayout();
-            panelCustomerIDOnList.SuspendLayout();
-            tabPage2.SuspendLayout();
-            panelTypeEmployeeOnList.SuspendLayout();
-            panelEmployeeNameOnList.SuspendLayout();
-            panelEmployeePhoneOnList.SuspendLayout();
-            panelEmployeeIDOnList.SuspendLayout();
             SuspendLayout();
             // 
-            // columnHeader1
+            // columnHeader16
             // 
-            columnHeader1.Text = "ProductID";
-            columnHeader1.Width = 80;
+            columnHeader16.Text = "EmployeeID";
+            columnHeader16.Width = 100;
             // 
             // columnHeader11
             // 
             columnHeader11.Text = "CustomerID";
             columnHeader11.Width = 100;
             // 
-            // columnHeader16
+            // columnHeader1
             // 
-            columnHeader16.Text = "EmployeeID";
-            columnHeader16.Width = 100;
+            columnHeader1.Text = "ProductID";
+            columnHeader1.Width = 80;
+            // 
+            // columnHeader20
+            // 
+            columnHeader20.Text = "OrtherID";
+            columnHeader20.Width = 80;
             // 
             // menuStrip1
             // 
@@ -222,7 +242,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { tàiKhoảnToolStripMenuItem, adminToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1161, 28);
+            menuStrip1.Size = new Size(1182, 28);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -252,6 +272,429 @@
             adminToolStripMenuItem.Text = "Admin";
             adminToolStripMenuItem.Click += adminToolStripMenuItem_Click;
             // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(buttonAddEmployee);
+            tabPage2.Controls.Add(buttonUpdateEmployee);
+            tabPage2.Controls.Add(panelTypeEmployeeOnList);
+            tabPage2.Controls.Add(buttonDeleteEmployee);
+            tabPage2.Controls.Add(panelEmployeeNameOnList);
+            tabPage2.Controls.Add(panelEmployeePhoneOnList);
+            tabPage2.Controls.Add(panelEmployeeIDOnList);
+            tabPage2.Controls.Add(labelTitleListEmployee);
+            tabPage2.Controls.Add(lsvListEmployee);
+            tabPage2.Location = new Point(4, 29);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(1152, 667);
+            tabPage2.TabIndex = 6;
+            tabPage2.Text = "Danh sách nhân viên";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddEmployee
+            // 
+            buttonAddEmployee.Location = new Point(717, 592);
+            buttonAddEmployee.Name = "buttonAddEmployee";
+            buttonAddEmployee.Size = new Size(94, 29);
+            buttonAddEmployee.TabIndex = 18;
+            buttonAddEmployee.Text = "Thêm";
+            buttonAddEmployee.UseVisualStyleBackColor = true;
+            buttonAddEmployee.Click += buttonAddEmployee_Click;
+            // 
+            // buttonUpdateEmployee
+            // 
+            buttonUpdateEmployee.Location = new Point(1013, 592);
+            buttonUpdateEmployee.Name = "buttonUpdateEmployee";
+            buttonUpdateEmployee.Size = new Size(94, 29);
+            buttonUpdateEmployee.TabIndex = 17;
+            buttonUpdateEmployee.Text = "Chỉnh sửa";
+            buttonUpdateEmployee.UseVisualStyleBackColor = true;
+            buttonUpdateEmployee.Click += buttonUpdateEmployee_Click;
+            // 
+            // panelTypeEmployeeOnList
+            // 
+            panelTypeEmployeeOnList.Controls.Add(comboBoxTypeEmployeeOnList);
+            panelTypeEmployeeOnList.Controls.Add(labelTypeEmployeeOnList);
+            panelTypeEmployeeOnList.ImeMode = ImeMode.HangulFull;
+            panelTypeEmployeeOnList.Location = new Point(717, 303);
+            panelTypeEmployeeOnList.Name = "panelTypeEmployeeOnList";
+            panelTypeEmployeeOnList.Size = new Size(390, 48);
+            panelTypeEmployeeOnList.TabIndex = 16;
+            // 
+            // comboBoxTypeEmployeeOnList
+            // 
+            comboBoxTypeEmployeeOnList.FormattingEnabled = true;
+            comboBoxTypeEmployeeOnList.Location = new Point(147, 12);
+            comboBoxTypeEmployeeOnList.Name = "comboBoxTypeEmployeeOnList";
+            comboBoxTypeEmployeeOnList.Size = new Size(231, 28);
+            comboBoxTypeEmployeeOnList.TabIndex = 1;
+            // 
+            // labelTypeEmployeeOnList
+            // 
+            labelTypeEmployeeOnList.AutoSize = true;
+            labelTypeEmployeeOnList.Location = new Point(19, 15);
+            labelTypeEmployeeOnList.Name = "labelTypeEmployeeOnList";
+            labelTypeEmployeeOnList.Size = new Size(104, 20);
+            labelTypeEmployeeOnList.TabIndex = 0;
+            labelTypeEmployeeOnList.Text = "Loại nhân viên";
+            // 
+            // buttonDeleteEmployee
+            // 
+            buttonDeleteEmployee.Location = new Point(864, 592);
+            buttonDeleteEmployee.Name = "buttonDeleteEmployee";
+            buttonDeleteEmployee.Size = new Size(94, 29);
+            buttonDeleteEmployee.TabIndex = 14;
+            buttonDeleteEmployee.Text = "Xóa";
+            buttonDeleteEmployee.UseVisualStyleBackColor = true;
+            buttonDeleteEmployee.Click += buttonDeleteEmployee_Click;
+            // 
+            // panelEmployeeNameOnList
+            // 
+            panelEmployeeNameOnList.Controls.Add(comboBoxEmployeeNameOnList);
+            panelEmployeeNameOnList.Controls.Add(labelEmployeeNameOnList);
+            panelEmployeeNameOnList.Location = new Point(717, 150);
+            panelEmployeeNameOnList.Name = "panelEmployeeNameOnList";
+            panelEmployeeNameOnList.Size = new Size(390, 48);
+            panelEmployeeNameOnList.TabIndex = 8;
+            // 
+            // comboBoxEmployeeNameOnList
+            // 
+            comboBoxEmployeeNameOnList.FormattingEnabled = true;
+            comboBoxEmployeeNameOnList.Location = new Point(147, 9);
+            comboBoxEmployeeNameOnList.Name = "comboBoxEmployeeNameOnList";
+            comboBoxEmployeeNameOnList.Size = new Size(231, 28);
+            comboBoxEmployeeNameOnList.TabIndex = 2;
+            // 
+            // labelEmployeeNameOnList
+            // 
+            labelEmployeeNameOnList.AutoSize = true;
+            labelEmployeeNameOnList.Location = new Point(19, 12);
+            labelEmployeeNameOnList.Name = "labelEmployeeNameOnList";
+            labelEmployeeNameOnList.Size = new Size(99, 20);
+            labelEmployeeNameOnList.TabIndex = 0;
+            labelEmployeeNameOnList.Text = "Tên nhân viên";
+            // 
+            // panelEmployeePhoneOnList
+            // 
+            panelEmployeePhoneOnList.Controls.Add(comboBoxEmployeePhoneOnList);
+            panelEmployeePhoneOnList.Controls.Add(labelEmployeePhoneOnList);
+            panelEmployeePhoneOnList.Location = new Point(717, 228);
+            panelEmployeePhoneOnList.Name = "panelEmployeePhoneOnList";
+            panelEmployeePhoneOnList.Size = new Size(390, 48);
+            panelEmployeePhoneOnList.TabIndex = 9;
+            // 
+            // comboBoxEmployeePhoneOnList
+            // 
+            comboBoxEmployeePhoneOnList.FormattingEnabled = true;
+            comboBoxEmployeePhoneOnList.Location = new Point(147, 9);
+            comboBoxEmployeePhoneOnList.Name = "comboBoxEmployeePhoneOnList";
+            comboBoxEmployeePhoneOnList.Size = new Size(231, 28);
+            comboBoxEmployeePhoneOnList.TabIndex = 3;
+            // 
+            // labelEmployeePhoneOnList
+            // 
+            labelEmployeePhoneOnList.AutoSize = true;
+            labelEmployeePhoneOnList.Location = new Point(19, 12);
+            labelEmployeePhoneOnList.Name = "labelEmployeePhoneOnList";
+            labelEmployeePhoneOnList.Size = new Size(97, 20);
+            labelEmployeePhoneOnList.TabIndex = 0;
+            labelEmployeePhoneOnList.Text = "Số điện thoại";
+            // 
+            // panelEmployeeIDOnList
+            // 
+            panelEmployeeIDOnList.Controls.Add(comboBoxEmployeeIDOnList);
+            panelEmployeeIDOnList.Controls.Add(labelEmployeeIDOnList);
+            panelEmployeeIDOnList.Location = new Point(717, 76);
+            panelEmployeeIDOnList.Name = "panelEmployeeIDOnList";
+            panelEmployeeIDOnList.Size = new Size(390, 48);
+            panelEmployeeIDOnList.TabIndex = 7;
+            // 
+            // comboBoxEmployeeIDOnList
+            // 
+            comboBoxEmployeeIDOnList.FormattingEnabled = true;
+            comboBoxEmployeeIDOnList.Location = new Point(147, 9);
+            comboBoxEmployeeIDOnList.Name = "comboBoxEmployeeIDOnList";
+            comboBoxEmployeeIDOnList.Size = new Size(231, 28);
+            comboBoxEmployeeIDOnList.TabIndex = 3;
+            // 
+            // labelEmployeeIDOnList
+            // 
+            labelEmployeeIDOnList.AutoSize = true;
+            labelEmployeeIDOnList.Location = new Point(19, 12);
+            labelEmployeeIDOnList.Name = "labelEmployeeIDOnList";
+            labelEmployeeIDOnList.Size = new Size(91, 20);
+            labelEmployeeIDOnList.TabIndex = 0;
+            labelEmployeeIDOnList.Text = "ID nhân viên";
+            // 
+            // labelTitleListEmployee
+            // 
+            labelTitleListEmployee.AutoSize = true;
+            labelTitleListEmployee.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTitleListEmployee.Location = new Point(20, 25);
+            labelTitleListEmployee.Name = "labelTitleListEmployee";
+            labelTitleListEmployee.Size = new Size(315, 31);
+            labelTitleListEmployee.TabIndex = 6;
+            labelTitleListEmployee.Text = "DANH SÁCH CÁC NHÂN VIÊN";
+            // 
+            // lsvListEmployee
+            // 
+            lsvListEmployee.Columns.AddRange(new ColumnHeader[] { columnHeader16, columnHeader17, columnHeader18, columnHeader19 });
+            lsvListEmployee.ForeColor = SystemColors.Desktop;
+            lsvListEmployee.FullRowSelect = true;
+            lsvListEmployee.GridLines = true;
+            lsvListEmployee.Location = new Point(20, 60);
+            lsvListEmployee.MultiSelect = false;
+            lsvListEmployee.Name = "lsvListEmployee";
+            lsvListEmployee.Size = new Size(674, 555);
+            lsvListEmployee.TabIndex = 5;
+            lsvListEmployee.UseCompatibleStateImageBehavior = false;
+            lsvListEmployee.View = View.Details;
+            lsvListEmployee.SelectedIndexChanged += lsvListEmployee_SelectedIndexChanged;
+            // 
+            // columnHeader17
+            // 
+            columnHeader17.Text = "EmployeeName";
+            columnHeader17.Width = 220;
+            // 
+            // columnHeader18
+            // 
+            columnHeader18.Text = "Phone";
+            columnHeader18.Width = 150;
+            // 
+            // columnHeader19
+            // 
+            columnHeader19.Text = "TypeEmployee";
+            columnHeader19.Width = 180;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(buttonUpdateCustomer);
+            tabPage1.Controls.Add(buttonAddCustomer);
+            tabPage1.Controls.Add(panelDebtOnList);
+            tabPage1.Controls.Add(panelCustomerNameOnList);
+            tabPage1.Controls.Add(panelCustomerPhoneOnList);
+            tabPage1.Controls.Add(panelTypeCustomerOnList);
+            tabPage1.Controls.Add(panelCustomerIDOnList);
+            tabPage1.Controls.Add(buttonDeleteCustomer);
+            tabPage1.Controls.Add(labelTitleListCustomer);
+            tabPage1.Controls.Add(lsvListCustomer);
+            tabPage1.Location = new Point(4, 29);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(1152, 667);
+            tabPage1.TabIndex = 5;
+            tabPage1.Text = "Danh sách khách hàng";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // buttonUpdateCustomer
+            // 
+            buttonUpdateCustomer.Location = new Point(1001, 590);
+            buttonUpdateCustomer.Name = "buttonUpdateCustomer";
+            buttonUpdateCustomer.Size = new Size(94, 29);
+            buttonUpdateCustomer.TabIndex = 20;
+            buttonUpdateCustomer.Text = "Chỉnh sửa";
+            buttonUpdateCustomer.UseVisualStyleBackColor = true;
+            buttonUpdateCustomer.Click += buttonUpdateCustomer_Click;
+            // 
+            // buttonAddCustomer
+            // 
+            buttonAddCustomer.Location = new Point(717, 590);
+            buttonAddCustomer.Name = "buttonAddCustomer";
+            buttonAddCustomer.Size = new Size(94, 29);
+            buttonAddCustomer.TabIndex = 18;
+            buttonAddCustomer.Text = "Thêm";
+            buttonAddCustomer.UseVisualStyleBackColor = true;
+            buttonAddCustomer.Click += buttonAddCustomer_Click;
+            // 
+            // panelDebtOnList
+            // 
+            panelDebtOnList.Controls.Add(numDebtOnList);
+            panelDebtOnList.Controls.Add(labelDebtOnList);
+            panelDebtOnList.ImeMode = ImeMode.HangulFull;
+            panelDebtOnList.Location = new Point(717, 393);
+            panelDebtOnList.Name = "panelDebtOnList";
+            panelDebtOnList.Size = new Size(390, 48);
+            panelDebtOnList.TabIndex = 16;
+            // 
+            // numDebtOnList
+            // 
+            numDebtOnList.Increment = new decimal(new int[] { 1000, 0, 0, 0 });
+            numDebtOnList.Location = new Point(147, 10);
+            numDebtOnList.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
+            numDebtOnList.Name = "numDebtOnList";
+            numDebtOnList.Size = new Size(231, 27);
+            numDebtOnList.TabIndex = 5;
+            numDebtOnList.ThousandsSeparator = true;
+            // 
+            // labelDebtOnList
+            // 
+            labelDebtOnList.AutoSize = true;
+            labelDebtOnList.Location = new Point(19, 12);
+            labelDebtOnList.Name = "labelDebtOnList";
+            labelDebtOnList.Size = new Size(76, 20);
+            labelDebtOnList.TabIndex = 0;
+            labelDebtOnList.Text = "Số tiền nợ";
+            // 
+            // panelCustomerNameOnList
+            // 
+            panelCustomerNameOnList.Controls.Add(comboBoxCustomerNameOnList);
+            panelCustomerNameOnList.Controls.Add(labelCustomerNameOnList);
+            panelCustomerNameOnList.Location = new Point(717, 151);
+            panelCustomerNameOnList.Name = "panelCustomerNameOnList";
+            panelCustomerNameOnList.Size = new Size(390, 48);
+            panelCustomerNameOnList.TabIndex = 13;
+            // 
+            // comboBoxCustomerNameOnList
+            // 
+            comboBoxCustomerNameOnList.FormattingEnabled = true;
+            comboBoxCustomerNameOnList.Location = new Point(147, 9);
+            comboBoxCustomerNameOnList.Name = "comboBoxCustomerNameOnList";
+            comboBoxCustomerNameOnList.Size = new Size(231, 28);
+            comboBoxCustomerNameOnList.TabIndex = 2;
+            // 
+            // labelCustomerNameOnList
+            // 
+            labelCustomerNameOnList.AutoSize = true;
+            labelCustomerNameOnList.Location = new Point(19, 12);
+            labelCustomerNameOnList.Name = "labelCustomerNameOnList";
+            labelCustomerNameOnList.Size = new Size(111, 20);
+            labelCustomerNameOnList.TabIndex = 0;
+            labelCustomerNameOnList.Text = "Tên khách hàng";
+            // 
+            // panelCustomerPhoneOnList
+            // 
+            panelCustomerPhoneOnList.Controls.Add(comboBoxCustomerPhoneOnList);
+            panelCustomerPhoneOnList.Controls.Add(labelCustomerPhoneOnList);
+            panelCustomerPhoneOnList.Location = new Point(717, 229);
+            panelCustomerPhoneOnList.Name = "panelCustomerPhoneOnList";
+            panelCustomerPhoneOnList.Size = new Size(390, 48);
+            panelCustomerPhoneOnList.TabIndex = 14;
+            // 
+            // comboBoxCustomerPhoneOnList
+            // 
+            comboBoxCustomerPhoneOnList.FormattingEnabled = true;
+            comboBoxCustomerPhoneOnList.Location = new Point(147, 9);
+            comboBoxCustomerPhoneOnList.Name = "comboBoxCustomerPhoneOnList";
+            comboBoxCustomerPhoneOnList.Size = new Size(231, 28);
+            comboBoxCustomerPhoneOnList.TabIndex = 3;
+            // 
+            // labelCustomerPhoneOnList
+            // 
+            labelCustomerPhoneOnList.AutoSize = true;
+            labelCustomerPhoneOnList.Location = new Point(19, 12);
+            labelCustomerPhoneOnList.Name = "labelCustomerPhoneOnList";
+            labelCustomerPhoneOnList.Size = new Size(97, 20);
+            labelCustomerPhoneOnList.TabIndex = 0;
+            labelCustomerPhoneOnList.Text = "Số điện thoại";
+            // 
+            // panelTypeCustomerOnList
+            // 
+            panelTypeCustomerOnList.Controls.Add(comboBoxTypeCustomerOnList);
+            panelTypeCustomerOnList.Controls.Add(labelTypeCustomerOnList);
+            panelTypeCustomerOnList.ImeMode = ImeMode.HangulFull;
+            panelTypeCustomerOnList.Location = new Point(717, 312);
+            panelTypeCustomerOnList.Name = "panelTypeCustomerOnList";
+            panelTypeCustomerOnList.Size = new Size(390, 48);
+            panelTypeCustomerOnList.TabIndex = 15;
+            // 
+            // comboBoxTypeCustomerOnList
+            // 
+            comboBoxTypeCustomerOnList.FormattingEnabled = true;
+            comboBoxTypeCustomerOnList.Location = new Point(147, 12);
+            comboBoxTypeCustomerOnList.Name = "comboBoxTypeCustomerOnList";
+            comboBoxTypeCustomerOnList.Size = new Size(231, 28);
+            comboBoxTypeCustomerOnList.TabIndex = 1;
+            // 
+            // labelTypeCustomerOnList
+            // 
+            labelTypeCustomerOnList.AutoSize = true;
+            labelTypeCustomerOnList.Location = new Point(19, 12);
+            labelTypeCustomerOnList.Name = "labelTypeCustomerOnList";
+            labelTypeCustomerOnList.Size = new Size(116, 20);
+            labelTypeCustomerOnList.TabIndex = 0;
+            labelTypeCustomerOnList.Text = "Loại khách hàng";
+            // 
+            // panelCustomerIDOnList
+            // 
+            panelCustomerIDOnList.Controls.Add(comboBoxCustomerIDOnList);
+            panelCustomerIDOnList.Controls.Add(labelCustomerIDOnList);
+            panelCustomerIDOnList.Location = new Point(717, 76);
+            panelCustomerIDOnList.Name = "panelCustomerIDOnList";
+            panelCustomerIDOnList.Size = new Size(390, 48);
+            panelCustomerIDOnList.TabIndex = 12;
+            // 
+            // comboBoxCustomerIDOnList
+            // 
+            comboBoxCustomerIDOnList.FormattingEnabled = true;
+            comboBoxCustomerIDOnList.Location = new Point(147, 9);
+            comboBoxCustomerIDOnList.Name = "comboBoxCustomerIDOnList";
+            comboBoxCustomerIDOnList.Size = new Size(231, 28);
+            comboBoxCustomerIDOnList.TabIndex = 3;
+            // 
+            // labelCustomerIDOnList
+            // 
+            labelCustomerIDOnList.AutoSize = true;
+            labelCustomerIDOnList.Location = new Point(19, 12);
+            labelCustomerIDOnList.Name = "labelCustomerIDOnList";
+            labelCustomerIDOnList.Size = new Size(105, 20);
+            labelCustomerIDOnList.TabIndex = 0;
+            labelCustomerIDOnList.Text = "ID Khách hàng";
+            // 
+            // buttonDeleteCustomer
+            // 
+            buttonDeleteCustomer.Location = new Point(864, 590);
+            buttonDeleteCustomer.Name = "buttonDeleteCustomer";
+            buttonDeleteCustomer.Size = new Size(94, 29);
+            buttonDeleteCustomer.TabIndex = 19;
+            buttonDeleteCustomer.Text = "Xóa";
+            buttonDeleteCustomer.UseVisualStyleBackColor = true;
+            buttonDeleteCustomer.Click += buttonDeleteCustomer_Click;
+            // 
+            // labelTitleListCustomer
+            // 
+            labelTitleListCustomer.AutoSize = true;
+            labelTitleListCustomer.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTitleListCustomer.Location = new Point(20, 25);
+            labelTitleListCustomer.Name = "labelTitleListCustomer";
+            labelTitleListCustomer.Size = new Size(339, 31);
+            labelTitleListCustomer.TabIndex = 11;
+            labelTitleListCustomer.Text = "DANH SÁCH CÁC KHÁCH HÀNG";
+            // 
+            // lsvListCustomer
+            // 
+            lsvListCustomer.Columns.AddRange(new ColumnHeader[] { columnHeader11, columnHeader12, columnHeader13, columnHeader14, columnHeader15 });
+            lsvListCustomer.ForeColor = SystemColors.Desktop;
+            lsvListCustomer.FullRowSelect = true;
+            lsvListCustomer.GridLines = true;
+            lsvListCustomer.Location = new Point(20, 60);
+            lsvListCustomer.MultiSelect = false;
+            lsvListCustomer.Name = "lsvListCustomer";
+            lsvListCustomer.Size = new Size(674, 555);
+            lsvListCustomer.TabIndex = 10;
+            lsvListCustomer.UseCompatibleStateImageBehavior = false;
+            lsvListCustomer.View = View.Details;
+            lsvListCustomer.SelectedIndexChanged += lsvListCustomer_SelectedIndexChanged;
+            // 
+            // columnHeader12
+            // 
+            columnHeader12.Text = "CustomerName";
+            columnHeader12.Width = 180;
+            // 
+            // columnHeader13
+            // 
+            columnHeader13.Text = "Phone";
+            columnHeader13.Width = 120;
+            // 
+            // columnHeader14
+            // 
+            columnHeader14.Text = "TypeCustomer";
+            columnHeader14.Width = 120;
+            // 
+            // columnHeader15
+            // 
+            columnHeader15.Text = "Debt";
+            columnHeader15.Width = 120;
+            // 
             // tabPageListProduct
             // 
             tabPageListProduct.Controls.Add(buttonUpdateProduct);
@@ -268,7 +711,7 @@
             tabPageListProduct.Location = new Point(4, 29);
             tabPageListProduct.Name = "tabPageListProduct";
             tabPageListProduct.Padding = new Padding(3);
-            tabPageListProduct.Size = new Size(1129, 657);
+            tabPageListProduct.Size = new Size(1152, 667);
             tabPageListProduct.TabIndex = 4;
             tabPageListProduct.Text = "Danh sách mặt hàng";
             tabPageListProduct.UseVisualStyleBackColor = true;
@@ -470,7 +913,7 @@
             // 
             labelTitleListProduct.AutoSize = true;
             labelTitleListProduct.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            labelTitleListProduct.Location = new Point(27, 16);
+            labelTitleListProduct.Location = new Point(20, 25);
             labelTitleListProduct.Name = "labelTitleListProduct";
             labelTitleListProduct.Size = new Size(313, 31);
             labelTitleListProduct.TabIndex = 1;
@@ -482,7 +925,7 @@
             lsvListProduct.ForeColor = SystemColors.Desktop;
             lsvListProduct.FullRowSelect = true;
             lsvListProduct.GridLines = true;
-            lsvListProduct.Location = new Point(27, 67);
+            lsvListProduct.Location = new Point(20, 60);
             lsvListProduct.MultiSelect = false;
             lsvListProduct.Name = "lsvListProduct";
             lsvListProduct.Size = new Size(674, 555);
@@ -519,33 +962,94 @@
             // 
             // tpLookUpOrders
             // 
+            tpLookUpOrders.Controls.Add(buttonSeeOrderDetail);
+            tpLookUpOrders.Controls.Add(labelTitleListOrder);
+            tpLookUpOrders.Controls.Add(lsvListOrder);
             tpLookUpOrders.Location = new Point(4, 29);
             tpLookUpOrders.Name = "tpLookUpOrders";
             tpLookUpOrders.Padding = new Padding(3);
-            tpLookUpOrders.Size = new Size(1129, 657);
+            tpLookUpOrders.Size = new Size(1152, 667);
             tpLookUpOrders.TabIndex = 2;
             tpLookUpOrders.Text = "Danh sách hóa đơn";
             tpLookUpOrders.UseVisualStyleBackColor = true;
             // 
-            // tpPaying
+            // buttonSeeOrderDetail
             // 
-            tpPaying.Location = new Point(4, 29);
-            tpPaying.Name = "tpPaying";
-            tpPaying.Padding = new Padding(3);
-            tpPaying.Size = new Size(1129, 657);
-            tpPaying.TabIndex = 1;
-            tpPaying.Text = "Thanh toán nợ";
-            tpPaying.UseVisualStyleBackColor = true;
+            buttonSeeOrderDetail.Location = new Point(984, 610);
+            buttonSeeOrderDetail.Name = "buttonSeeOrderDetail";
+            buttonSeeOrderDetail.Size = new Size(129, 29);
+            buttonSeeOrderDetail.TabIndex = 12;
+            buttonSeeOrderDetail.Text = "Xem chi tiết";
+            buttonSeeOrderDetail.UseVisualStyleBackColor = true;
+            buttonSeeOrderDetail.Click += buttonSeeOrderDetail_Click;
+            // 
+            // labelTitleListOrder
+            // 
+            labelTitleListOrder.AutoSize = true;
+            labelTitleListOrder.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTitleListOrder.Location = new Point(20, 25);
+            labelTitleListOrder.Name = "labelTitleListOrder";
+            labelTitleListOrder.Size = new Size(299, 31);
+            labelTitleListOrder.TabIndex = 3;
+            labelTitleListOrder.Text = "DANH SÁCH CÁC HÓA ĐƠN";
+            // 
+            // lsvListOrder
+            // 
+            lsvListOrder.Columns.AddRange(new ColumnHeader[] { columnHeader20, columnHeader21, columnHeader22, columnHeader23, columnHeader24, columnHeader25, columnHeader26, columnHeader27 });
+            lsvListOrder.ForeColor = SystemColors.Desktop;
+            lsvListOrder.FullRowSelect = true;
+            lsvListOrder.GridLines = true;
+            lsvListOrder.Location = new Point(20, 60);
+            lsvListOrder.MultiSelect = false;
+            lsvListOrder.Name = "lsvListOrder";
+            lsvListOrder.Size = new Size(1093, 530);
+            lsvListOrder.TabIndex = 2;
+            lsvListOrder.UseCompatibleStateImageBehavior = false;
+            lsvListOrder.View = View.Details;
+            // 
+            // columnHeader21
+            // 
+            columnHeader21.Text = "CustomerID";
+            columnHeader21.Width = 100;
+            // 
+            // columnHeader22
+            // 
+            columnHeader22.Text = "CustomerName";
+            columnHeader22.Width = 180;
+            // 
+            // columnHeader23
+            // 
+            columnHeader23.Text = "EmployeeID";
+            columnHeader23.Width = 100;
+            // 
+            // columnHeader24
+            // 
+            columnHeader24.Text = "EmployeeName";
+            columnHeader24.Width = 180;
+            // 
+            // columnHeader25
+            // 
+            columnHeader25.Text = "OrderDate";
+            columnHeader25.Width = 180;
+            // 
+            // columnHeader26
+            // 
+            columnHeader26.Text = "Amount";
+            columnHeader26.Width = 120;
+            // 
+            // columnHeader27
+            // 
+            columnHeader27.Text = "PaymentMethod";
+            columnHeader27.Width = 120;
             // 
             // tpNewBuy
             // 
             tpNewBuy.Controls.Add(panel2);
             tpNewBuy.Controls.Add(buttonBuy);
             tpNewBuy.Controls.Add(buttonDeleteProductIntoOrder);
-            tpNewBuy.Controls.Add(button2);
             tpNewBuy.Controls.Add(panelTotalAmount);
             tpNewBuy.Controls.Add(labelTitleCustomer);
-            tpNewBuy.Controls.Add(lsvNewOrderDetailList);
+            tpNewBuy.Controls.Add(lsvNewListOrderDetail);
             tpNewBuy.Controls.Add(panelOrderDate);
             tpNewBuy.Controls.Add(label12);
             tpNewBuy.Controls.Add(panelQuatity);
@@ -562,27 +1066,27 @@
             tpNewBuy.Location = new Point(4, 29);
             tpNewBuy.Name = "tpNewBuy";
             tpNewBuy.Padding = new Padding(3);
-            tpNewBuy.Size = new Size(1129, 657);
+            tpNewBuy.Size = new Size(1152, 667);
             tpNewBuy.TabIndex = 0;
             tpNewBuy.Text = "Mua mới";
             tpNewBuy.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
-            panel2.Controls.Add(comboBox1);
+            panel2.Controls.Add(comboBoxPaymentMethod);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(465, 487);
+            panel2.Location = new Point(481, 541);
             panel2.Name = "panel2";
             panel2.Size = new Size(390, 48);
             panel2.TabIndex = 18;
             // 
-            // comboBox1
+            // comboBoxPaymentMethod
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(147, 9);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(231, 28);
-            comboBox1.TabIndex = 1;
+            comboBoxPaymentMethod.FormattingEnabled = true;
+            comboBoxPaymentMethod.Location = new Point(147, 9);
+            comboBoxPaymentMethod.Name = "comboBoxPaymentMethod";
+            comboBoxPaymentMethod.Size = new Size(231, 28);
+            comboBoxPaymentMethod.TabIndex = 1;
             // 
             // label2
             // 
@@ -595,45 +1099,38 @@
             // 
             // buttonBuy
             // 
-            buttonBuy.Location = new Point(965, 606);
+            buttonBuy.Location = new Point(999, 606);
             buttonBuy.Name = "buttonBuy";
             buttonBuy.Size = new Size(94, 29);
             buttonBuy.TabIndex = 17;
             buttonBuy.Text = "Mua";
             buttonBuy.UseVisualStyleBackColor = true;
+            buttonBuy.Click += buttonBuy_Click;
             // 
             // buttonDeleteProductIntoOrder
             // 
-            buttonDeleteProductIntoOrder.Location = new Point(166, 606);
+            buttonDeleteProductIntoOrder.Location = new Point(165, 606);
             buttonDeleteProductIntoOrder.Name = "buttonDeleteProductIntoOrder";
             buttonDeleteProductIntoOrder.Size = new Size(94, 29);
             buttonDeleteProductIntoOrder.TabIndex = 16;
             buttonDeleteProductIntoOrder.Text = "Xóa";
             buttonDeleteProductIntoOrder.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(314, 606);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 15;
-            button2.Text = "Chỉnh sửa";
-            button2.UseVisualStyleBackColor = true;
+            buttonDeleteProductIntoOrder.Click += buttonDeleteProductIntoOrder_Click;
             // 
             // panelTotalAmount
             // 
             panelTotalAmount.Controls.Add(numericUpDownTotalAmount);
             panelTotalAmount.Controls.Add(labelTotalAmount);
-            panelTotalAmount.Location = new Point(465, 433);
+            panelTotalAmount.Location = new Point(481, 487);
             panelTotalAmount.Name = "panelTotalAmount";
             panelTotalAmount.Size = new Size(390, 48);
             panelTotalAmount.TabIndex = 10;
             // 
             // numericUpDownTotalAmount
             // 
-            numericUpDownTotalAmount.Increment = new decimal(new int[] { 1000, 0, 0, 0 });
+            numericUpDownTotalAmount.Increment = new decimal(new int[] { 0, 0, 0, 0 });
             numericUpDownTotalAmount.Location = new Point(147, 10);
-            numericUpDownTotalAmount.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
+            numericUpDownTotalAmount.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
             numericUpDownTotalAmount.Name = "numericUpDownTotalAmount";
             numericUpDownTotalAmount.ReadOnly = true;
             numericUpDownTotalAmount.Size = new Size(231, 27);
@@ -659,19 +1156,43 @@
             labelTitleCustomer.TabIndex = 14;
             labelTitleCustomer.Text = "KHÁCH HÀNG";
             // 
-            // lsvNewOrderDetailList
+            // lsvNewListOrderDetail
             // 
-            lsvNewOrderDetailList.Location = new Point(465, 62);
-            lsvNewOrderDetailList.Name = "lsvNewOrderDetailList";
-            lsvNewOrderDetailList.Size = new Size(628, 284);
-            lsvNewOrderDetailList.TabIndex = 13;
-            lsvNewOrderDetailList.UseCompatibleStateImageBehavior = false;
+            lsvNewListOrderDetail.Columns.AddRange(new ColumnHeader[] { columnHeader7, columnHeader8, columnHeader9, columnHeader10 });
+            lsvNewListOrderDetail.FullRowSelect = true;
+            lsvNewListOrderDetail.Location = new Point(481, 47);
+            lsvNewListOrderDetail.MultiSelect = false;
+            lsvNewListOrderDetail.Name = "lsvNewListOrderDetail";
+            lsvNewListOrderDetail.Size = new Size(628, 369);
+            lsvNewListOrderDetail.TabIndex = 13;
+            lsvNewListOrderDetail.UseCompatibleStateImageBehavior = false;
+            lsvNewListOrderDetail.View = View.Details;
+            // 
+            // columnHeader7
+            // 
+            columnHeader7.Text = "ProductName";
+            columnHeader7.Width = 200;
+            // 
+            // columnHeader8
+            // 
+            columnHeader8.Text = "Price";
+            columnHeader8.Width = 150;
+            // 
+            // columnHeader9
+            // 
+            columnHeader9.Text = "Quatity";
+            columnHeader9.Width = 80;
+            // 
+            // columnHeader10
+            // 
+            columnHeader10.Text = "Charge";
+            columnHeader10.Width = 200;
             // 
             // panelOrderDate
             // 
             panelOrderDate.Controls.Add(dateTimePickerOrderDate);
             panelOrderDate.Controls.Add(labelOrderDate);
-            panelOrderDate.Location = new Point(465, 379);
+            panelOrderDate.Location = new Point(481, 433);
             panelOrderDate.Name = "panelOrderDate";
             panelOrderDate.Size = new Size(390, 48);
             panelOrderDate.TabIndex = 11;
@@ -696,7 +1217,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(483, 12);
+            label12.Location = new Point(481, 12);
             label12.Name = "label12";
             label12.Size = new Size(230, 28);
             label12.TabIndex = 12;
@@ -735,6 +1256,7 @@
             buttonAddProductIntoOrder.TabIndex = 11;
             buttonAddProductIntoOrder.Text = "Thêm";
             buttonAddProductIntoOrder.UseVisualStyleBackColor = true;
+            buttonAddProductIntoOrder.Click += buttonAddProductIntoOrder_Click;
             // 
             // panelPrice
             // 
@@ -947,7 +1469,6 @@
             // tpProducts
             // 
             tpProducts.Controls.Add(tpNewBuy);
-            tpProducts.Controls.Add(tpPaying);
             tpProducts.Controls.Add(tpLookUpOrders);
             tpProducts.Controls.Add(tabPageListProduct);
             tpProducts.Controls.Add(tabPage1);
@@ -955,438 +1476,15 @@
             tpProducts.Location = new Point(12, 33);
             tpProducts.Name = "tpProducts";
             tpProducts.SelectedIndex = 0;
-            tpProducts.Size = new Size(1137, 690);
+            tpProducts.Size = new Size(1160, 700);
             tpProducts.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            tabPage1.Controls.Add(buttonUpdateCustomer);
-            tabPage1.Controls.Add(buttonAddCustomer);
-            tabPage1.Controls.Add(panelDebtOnList);
-            tabPage1.Controls.Add(panelCustomerNameOnList);
-            tabPage1.Controls.Add(panelCustomerPhoneOnList);
-            tabPage1.Controls.Add(panelTypeCustomerOnList);
-            tabPage1.Controls.Add(panelCustomerIDOnList);
-            tabPage1.Controls.Add(buttonDeleteCustomer);
-            tabPage1.Controls.Add(labelTitleListCustomer);
-            tabPage1.Controls.Add(lsvListCustomer);
-            tabPage1.Location = new Point(4, 29);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1129, 657);
-            tabPage1.TabIndex = 5;
-            tabPage1.Text = "Danh sách khách hàng";
-            tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // buttonUpdateCustomer
-            // 
-            buttonUpdateCustomer.Location = new Point(1001, 590);
-            buttonUpdateCustomer.Name = "buttonUpdateCustomer";
-            buttonUpdateCustomer.Size = new Size(94, 29);
-            buttonUpdateCustomer.TabIndex = 20;
-            buttonUpdateCustomer.Text = "Chỉnh sửa";
-            buttonUpdateCustomer.UseVisualStyleBackColor = true;
-            buttonUpdateCustomer.Click += buttonUpdateCustomer_Click;
-            // 
-            // buttonAddCustomer
-            // 
-            buttonAddCustomer.Location = new Point(717, 590);
-            buttonAddCustomer.Name = "buttonAddCustomer";
-            buttonAddCustomer.Size = new Size(94, 29);
-            buttonAddCustomer.TabIndex = 18;
-            buttonAddCustomer.Text = "Thêm";
-            buttonAddCustomer.UseVisualStyleBackColor = true;
-            buttonAddCustomer.Click += buttonAddCustomer_Click;
-            // 
-            // panelDebtOnList
-            // 
-            panelDebtOnList.Controls.Add(numDebtOnList);
-            panelDebtOnList.Controls.Add(labelDebtOnList);
-            panelDebtOnList.ImeMode = ImeMode.HangulFull;
-            panelDebtOnList.Location = new Point(717, 393);
-            panelDebtOnList.Name = "panelDebtOnList";
-            panelDebtOnList.Size = new Size(390, 48);
-            panelDebtOnList.TabIndex = 16;
-            // 
-            // numDebtOnList
-            // 
-            numDebtOnList.Increment = new decimal(new int[] { 1000, 0, 0, 0 });
-            numDebtOnList.Location = new Point(147, 10);
-            numDebtOnList.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
-            numDebtOnList.Name = "numDebtOnList";
-            numDebtOnList.Size = new Size(231, 27);
-            numDebtOnList.TabIndex = 5;
-            numDebtOnList.ThousandsSeparator = true;
-            // 
-            // labelDebtOnList
-            // 
-            labelDebtOnList.AutoSize = true;
-            labelDebtOnList.Location = new Point(19, 12);
-            labelDebtOnList.Name = "labelDebtOnList";
-            labelDebtOnList.Size = new Size(76, 20);
-            labelDebtOnList.TabIndex = 0;
-            labelDebtOnList.Text = "Số tiền nợ";
-            // 
-            // panelCustomerNameOnList
-            // 
-            panelCustomerNameOnList.Controls.Add(comboBoxCustomerNameOnList);
-            panelCustomerNameOnList.Controls.Add(labelCustomerNameOnList);
-            panelCustomerNameOnList.Location = new Point(717, 151);
-            panelCustomerNameOnList.Name = "panelCustomerNameOnList";
-            panelCustomerNameOnList.Size = new Size(390, 48);
-            panelCustomerNameOnList.TabIndex = 13;
-            // 
-            // comboBoxCustomerNameOnList
-            // 
-            comboBoxCustomerNameOnList.FormattingEnabled = true;
-            comboBoxCustomerNameOnList.Location = new Point(147, 9);
-            comboBoxCustomerNameOnList.Name = "comboBoxCustomerNameOnList";
-            comboBoxCustomerNameOnList.Size = new Size(231, 28);
-            comboBoxCustomerNameOnList.TabIndex = 2;
-            // 
-            // labelCustomerNameOnList
-            // 
-            labelCustomerNameOnList.AutoSize = true;
-            labelCustomerNameOnList.Location = new Point(19, 12);
-            labelCustomerNameOnList.Name = "labelCustomerNameOnList";
-            labelCustomerNameOnList.Size = new Size(111, 20);
-            labelCustomerNameOnList.TabIndex = 0;
-            labelCustomerNameOnList.Text = "Tên khách hàng";
-            // 
-            // panelCustomerPhoneOnList
-            // 
-            panelCustomerPhoneOnList.Controls.Add(comboBoxCustomerPhoneOnList);
-            panelCustomerPhoneOnList.Controls.Add(labelCustomerPhoneOnList);
-            panelCustomerPhoneOnList.Location = new Point(717, 229);
-            panelCustomerPhoneOnList.Name = "panelCustomerPhoneOnList";
-            panelCustomerPhoneOnList.Size = new Size(390, 48);
-            panelCustomerPhoneOnList.TabIndex = 14;
-            // 
-            // comboBoxCustomerPhoneOnList
-            // 
-            comboBoxCustomerPhoneOnList.FormattingEnabled = true;
-            comboBoxCustomerPhoneOnList.Location = new Point(147, 9);
-            comboBoxCustomerPhoneOnList.Name = "comboBoxCustomerPhoneOnList";
-            comboBoxCustomerPhoneOnList.Size = new Size(231, 28);
-            comboBoxCustomerPhoneOnList.TabIndex = 3;
-            // 
-            // labelCustomerPhoneOnList
-            // 
-            labelCustomerPhoneOnList.AutoSize = true;
-            labelCustomerPhoneOnList.Location = new Point(19, 12);
-            labelCustomerPhoneOnList.Name = "labelCustomerPhoneOnList";
-            labelCustomerPhoneOnList.Size = new Size(97, 20);
-            labelCustomerPhoneOnList.TabIndex = 0;
-            labelCustomerPhoneOnList.Text = "Số điện thoại";
-            // 
-            // panelTypeCustomerOnList
-            // 
-            panelTypeCustomerOnList.Controls.Add(comboBoxTypeCustomerOnList);
-            panelTypeCustomerOnList.Controls.Add(labelTypeCustomerOnList);
-            panelTypeCustomerOnList.ImeMode = ImeMode.HangulFull;
-            panelTypeCustomerOnList.Location = new Point(717, 312);
-            panelTypeCustomerOnList.Name = "panelTypeCustomerOnList";
-            panelTypeCustomerOnList.Size = new Size(390, 48);
-            panelTypeCustomerOnList.TabIndex = 15;
-            // 
-            // comboBoxTypeCustomerOnList
-            // 
-            comboBoxTypeCustomerOnList.FormattingEnabled = true;
-            comboBoxTypeCustomerOnList.Location = new Point(147, 12);
-            comboBoxTypeCustomerOnList.Name = "comboBoxTypeCustomerOnList";
-            comboBoxTypeCustomerOnList.Size = new Size(231, 28);
-            comboBoxTypeCustomerOnList.TabIndex = 1;
-            // 
-            // labelTypeCustomerOnList
-            // 
-            labelTypeCustomerOnList.AutoSize = true;
-            labelTypeCustomerOnList.Location = new Point(19, 12);
-            labelTypeCustomerOnList.Name = "labelTypeCustomerOnList";
-            labelTypeCustomerOnList.Size = new Size(116, 20);
-            labelTypeCustomerOnList.TabIndex = 0;
-            labelTypeCustomerOnList.Text = "Loại khách hàng";
-            // 
-            // panelCustomerIDOnList
-            // 
-            panelCustomerIDOnList.Controls.Add(comboBoxCustomerIDOnList);
-            panelCustomerIDOnList.Controls.Add(labelCustomerIDOnList);
-            panelCustomerIDOnList.Location = new Point(717, 76);
-            panelCustomerIDOnList.Name = "panelCustomerIDOnList";
-            panelCustomerIDOnList.Size = new Size(390, 48);
-            panelCustomerIDOnList.TabIndex = 12;
-            // 
-            // comboBoxCustomerIDOnList
-            // 
-            comboBoxCustomerIDOnList.FormattingEnabled = true;
-            comboBoxCustomerIDOnList.Location = new Point(147, 9);
-            comboBoxCustomerIDOnList.Name = "comboBoxCustomerIDOnList";
-            comboBoxCustomerIDOnList.Size = new Size(231, 28);
-            comboBoxCustomerIDOnList.TabIndex = 3;
-            // 
-            // labelCustomerIDOnList
-            // 
-            labelCustomerIDOnList.AutoSize = true;
-            labelCustomerIDOnList.Location = new Point(19, 12);
-            labelCustomerIDOnList.Name = "labelCustomerIDOnList";
-            labelCustomerIDOnList.Size = new Size(105, 20);
-            labelCustomerIDOnList.TabIndex = 0;
-            labelCustomerIDOnList.Text = "ID Khách hàng";
-            // 
-            // buttonDeleteCustomer
-            // 
-            buttonDeleteCustomer.Location = new Point(864, 590);
-            buttonDeleteCustomer.Name = "buttonDeleteCustomer";
-            buttonDeleteCustomer.Size = new Size(94, 29);
-            buttonDeleteCustomer.TabIndex = 19;
-            buttonDeleteCustomer.Text = "Xóa";
-            buttonDeleteCustomer.UseVisualStyleBackColor = true;
-            buttonDeleteCustomer.Click += buttonDeleteCustomer_Click;
-            // 
-            // labelTitleListCustomer
-            // 
-            labelTitleListCustomer.AutoSize = true;
-            labelTitleListCustomer.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            labelTitleListCustomer.Location = new Point(21, 25);
-            labelTitleListCustomer.Name = "labelTitleListCustomer";
-            labelTitleListCustomer.Size = new Size(339, 31);
-            labelTitleListCustomer.TabIndex = 11;
-            labelTitleListCustomer.Text = "DANH SÁCH CÁC KHÁCH HÀNG";
-            // 
-            // lsvListCustomer
-            // 
-            lsvListCustomer.Columns.AddRange(new ColumnHeader[] { columnHeader11, columnHeader12, columnHeader13, columnHeader14, columnHeader15 });
-            lsvListCustomer.ForeColor = SystemColors.Desktop;
-            lsvListCustomer.FullRowSelect = true;
-            lsvListCustomer.GridLines = true;
-            lsvListCustomer.Location = new Point(21, 76);
-            lsvListCustomer.MultiSelect = false;
-            lsvListCustomer.Name = "lsvListCustomer";
-            lsvListCustomer.Size = new Size(674, 555);
-            lsvListCustomer.TabIndex = 10;
-            lsvListCustomer.UseCompatibleStateImageBehavior = false;
-            lsvListCustomer.View = View.Details;
-            lsvListCustomer.SelectedIndexChanged += lsvListCustomer_SelectedIndexChanged;
-            // 
-            // columnHeader12
-            // 
-            columnHeader12.Text = "CustomerName";
-            columnHeader12.Width = 180;
-            // 
-            // columnHeader13
-            // 
-            columnHeader13.Text = "Phone";
-            columnHeader13.Width = 120;
-            // 
-            // columnHeader14
-            // 
-            columnHeader14.Text = "TypeCustomer";
-            columnHeader14.Width = 120;
-            // 
-            // columnHeader15
-            // 
-            columnHeader15.Text = "Debt";
-            columnHeader15.Width = 120;
-            // 
-            // tabPage2
-            // 
-            tabPage2.Controls.Add(buttonAddEmployee);
-            tabPage2.Controls.Add(buttonUpdateEmployee);
-            tabPage2.Controls.Add(panelTypeEmployeeOnList);
-            tabPage2.Controls.Add(buttonDeleteEmployee);
-            tabPage2.Controls.Add(panelEmployeeNameOnList);
-            tabPage2.Controls.Add(panelEmployeePhoneOnList);
-            tabPage2.Controls.Add(panelEmployeeIDOnList);
-            tabPage2.Controls.Add(labelTitleListEmployee);
-            tabPage2.Controls.Add(lsvListEmployee);
-            tabPage2.Location = new Point(4, 29);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1129, 657);
-            tabPage2.TabIndex = 6;
-            tabPage2.Text = "Danh sách nhân viên";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // buttonAddEmployee
-            // 
-            buttonAddEmployee.Location = new Point(717, 592);
-            buttonAddEmployee.Name = "buttonAddEmployee";
-            buttonAddEmployee.Size = new Size(94, 29);
-            buttonAddEmployee.TabIndex = 18;
-            buttonAddEmployee.Text = "Thêm";
-            buttonAddEmployee.UseVisualStyleBackColor = true;
-            buttonAddEmployee.Click += buttonAddEmployee_Click;
-            // 
-            // buttonUpdateEmployee
-            // 
-            buttonUpdateEmployee.Location = new Point(1013, 592);
-            buttonUpdateEmployee.Name = "buttonUpdateEmployee";
-            buttonUpdateEmployee.Size = new Size(94, 29);
-            buttonUpdateEmployee.TabIndex = 17;
-            buttonUpdateEmployee.Text = "Chỉnh sửa";
-            buttonUpdateEmployee.UseVisualStyleBackColor = true;
-            buttonUpdateEmployee.Click += buttonUpdateEmployee_Click;
-            // 
-            // panelTypeEmployeeOnList
-            // 
-            panelTypeEmployeeOnList.Controls.Add(comboBoxTypeEmployeeOnList);
-            panelTypeEmployeeOnList.Controls.Add(labelTypeEmployeeOnList);
-            panelTypeEmployeeOnList.ImeMode = ImeMode.HangulFull;
-            panelTypeEmployeeOnList.Location = new Point(717, 303);
-            panelTypeEmployeeOnList.Name = "panelTypeEmployeeOnList";
-            panelTypeEmployeeOnList.Size = new Size(390, 48);
-            panelTypeEmployeeOnList.TabIndex = 16;
-            // 
-            // comboBoxTypeEmployeeOnList
-            // 
-            comboBoxTypeEmployeeOnList.FormattingEnabled = true;
-            comboBoxTypeEmployeeOnList.Location = new Point(147, 12);
-            comboBoxTypeEmployeeOnList.Name = "comboBoxTypeEmployeeOnList";
-            comboBoxTypeEmployeeOnList.Size = new Size(231, 28);
-            comboBoxTypeEmployeeOnList.TabIndex = 1;
-            // 
-            // labelTypeEmployeeOnList
-            // 
-            labelTypeEmployeeOnList.AutoSize = true;
-            labelTypeEmployeeOnList.Location = new Point(19, 15);
-            labelTypeEmployeeOnList.Name = "labelTypeEmployeeOnList";
-            labelTypeEmployeeOnList.Size = new Size(104, 20);
-            labelTypeEmployeeOnList.TabIndex = 0;
-            labelTypeEmployeeOnList.Text = "Loại nhân viên";
-            // 
-            // buttonDeleteEmployee
-            // 
-            buttonDeleteEmployee.Location = new Point(864, 592);
-            buttonDeleteEmployee.Name = "buttonDeleteEmployee";
-            buttonDeleteEmployee.Size = new Size(94, 29);
-            buttonDeleteEmployee.TabIndex = 14;
-            buttonDeleteEmployee.Text = "Xóa";
-            buttonDeleteEmployee.UseVisualStyleBackColor = true;
-            buttonDeleteEmployee.Click += buttonDeleteEmployee_Click;
-            // 
-            // panelEmployeeNameOnList
-            // 
-            panelEmployeeNameOnList.Controls.Add(comboBoxEmployeeNameOnList);
-            panelEmployeeNameOnList.Controls.Add(labelEmployeeNameOnList);
-            panelEmployeeNameOnList.Location = new Point(717, 150);
-            panelEmployeeNameOnList.Name = "panelEmployeeNameOnList";
-            panelEmployeeNameOnList.Size = new Size(390, 48);
-            panelEmployeeNameOnList.TabIndex = 8;
-            // 
-            // comboBoxEmployeeNameOnList
-            // 
-            comboBoxEmployeeNameOnList.FormattingEnabled = true;
-            comboBoxEmployeeNameOnList.Location = new Point(147, 9);
-            comboBoxEmployeeNameOnList.Name = "comboBoxEmployeeNameOnList";
-            comboBoxEmployeeNameOnList.Size = new Size(231, 28);
-            comboBoxEmployeeNameOnList.TabIndex = 2;
-            // 
-            // labelEmployeeNameOnList
-            // 
-            labelEmployeeNameOnList.AutoSize = true;
-            labelEmployeeNameOnList.Location = new Point(19, 12);
-            labelEmployeeNameOnList.Name = "labelEmployeeNameOnList";
-            labelEmployeeNameOnList.Size = new Size(99, 20);
-            labelEmployeeNameOnList.TabIndex = 0;
-            labelEmployeeNameOnList.Text = "Tên nhân viên";
-            // 
-            // panelEmployeePhoneOnList
-            // 
-            panelEmployeePhoneOnList.Controls.Add(comboBoxEmployeePhoneOnList);
-            panelEmployeePhoneOnList.Controls.Add(labelEmployeePhoneOnList);
-            panelEmployeePhoneOnList.Location = new Point(717, 228);
-            panelEmployeePhoneOnList.Name = "panelEmployeePhoneOnList";
-            panelEmployeePhoneOnList.Size = new Size(390, 48);
-            panelEmployeePhoneOnList.TabIndex = 9;
-            // 
-            // comboBoxEmployeePhoneOnList
-            // 
-            comboBoxEmployeePhoneOnList.FormattingEnabled = true;
-            comboBoxEmployeePhoneOnList.Location = new Point(147, 9);
-            comboBoxEmployeePhoneOnList.Name = "comboBoxEmployeePhoneOnList";
-            comboBoxEmployeePhoneOnList.Size = new Size(231, 28);
-            comboBoxEmployeePhoneOnList.TabIndex = 3;
-            // 
-            // labelEmployeePhoneOnList
-            // 
-            labelEmployeePhoneOnList.AutoSize = true;
-            labelEmployeePhoneOnList.Location = new Point(19, 12);
-            labelEmployeePhoneOnList.Name = "labelEmployeePhoneOnList";
-            labelEmployeePhoneOnList.Size = new Size(97, 20);
-            labelEmployeePhoneOnList.TabIndex = 0;
-            labelEmployeePhoneOnList.Text = "Số điện thoại";
-            // 
-            // panelEmployeeIDOnList
-            // 
-            panelEmployeeIDOnList.Controls.Add(comboBoxEmployeeIDOnList);
-            panelEmployeeIDOnList.Controls.Add(labelEmployeeIDOnList);
-            panelEmployeeIDOnList.Location = new Point(717, 76);
-            panelEmployeeIDOnList.Name = "panelEmployeeIDOnList";
-            panelEmployeeIDOnList.Size = new Size(390, 48);
-            panelEmployeeIDOnList.TabIndex = 7;
-            // 
-            // comboBoxEmployeeIDOnList
-            // 
-            comboBoxEmployeeIDOnList.FormattingEnabled = true;
-            comboBoxEmployeeIDOnList.Location = new Point(147, 9);
-            comboBoxEmployeeIDOnList.Name = "comboBoxEmployeeIDOnList";
-            comboBoxEmployeeIDOnList.Size = new Size(231, 28);
-            comboBoxEmployeeIDOnList.TabIndex = 3;
-            // 
-            // labelEmployeeIDOnList
-            // 
-            labelEmployeeIDOnList.AutoSize = true;
-            labelEmployeeIDOnList.Location = new Point(19, 12);
-            labelEmployeeIDOnList.Name = "labelEmployeeIDOnList";
-            labelEmployeeIDOnList.Size = new Size(91, 20);
-            labelEmployeeIDOnList.TabIndex = 0;
-            labelEmployeeIDOnList.Text = "ID nhân viên";
-            // 
-            // labelTitleListEmployee
-            // 
-            labelTitleListEmployee.AutoSize = true;
-            labelTitleListEmployee.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            labelTitleListEmployee.Location = new Point(21, 25);
-            labelTitleListEmployee.Name = "labelTitleListEmployee";
-            labelTitleListEmployee.Size = new Size(315, 31);
-            labelTitleListEmployee.TabIndex = 6;
-            labelTitleListEmployee.Text = "DANH SÁCH CÁC NHÂN VIÊN";
-            // 
-            // lsvListEmployee
-            // 
-            lsvListEmployee.Columns.AddRange(new ColumnHeader[] { columnHeader16, columnHeader17, columnHeader18, columnHeader19 });
-            lsvListEmployee.ForeColor = SystemColors.Desktop;
-            lsvListEmployee.FullRowSelect = true;
-            lsvListEmployee.GridLines = true;
-            lsvListEmployee.Location = new Point(21, 76);
-            lsvListEmployee.MultiSelect = false;
-            lsvListEmployee.Name = "lsvListEmployee";
-            lsvListEmployee.Size = new Size(674, 555);
-            lsvListEmployee.TabIndex = 5;
-            lsvListEmployee.UseCompatibleStateImageBehavior = false;
-            lsvListEmployee.View = View.Details;
-            lsvListEmployee.SelectedIndexChanged += lsvListEmployee_SelectedIndexChanged;
-            // 
-            // columnHeader17
-            // 
-            columnHeader17.Text = "EmployeeName";
-            columnHeader17.Width = 220;
-            // 
-            // columnHeader18
-            // 
-            columnHeader18.Text = "Phone";
-            columnHeader18.Width = 150;
-            // 
-            // columnHeader19
-            // 
-            columnHeader19.Text = "TypeEmployee";
-            columnHeader19.Width = 180;
             // 
             // FormStoreManager
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(1161, 734);
+            ClientSize = new Size(1182, 753);
             Controls.Add(tpProducts);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
@@ -1397,6 +1495,29 @@
             Text = "Quản lý cửa hàng";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            panelTypeEmployeeOnList.ResumeLayout(false);
+            panelTypeEmployeeOnList.PerformLayout();
+            panelEmployeeNameOnList.ResumeLayout(false);
+            panelEmployeeNameOnList.PerformLayout();
+            panelEmployeePhoneOnList.ResumeLayout(false);
+            panelEmployeePhoneOnList.PerformLayout();
+            panelEmployeeIDOnList.ResumeLayout(false);
+            panelEmployeeIDOnList.PerformLayout();
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            panelDebtOnList.ResumeLayout(false);
+            panelDebtOnList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numDebtOnList).EndInit();
+            panelCustomerNameOnList.ResumeLayout(false);
+            panelCustomerNameOnList.PerformLayout();
+            panelCustomerPhoneOnList.ResumeLayout(false);
+            panelCustomerPhoneOnList.PerformLayout();
+            panelTypeCustomerOnList.ResumeLayout(false);
+            panelTypeCustomerOnList.PerformLayout();
+            panelCustomerIDOnList.ResumeLayout(false);
+            panelCustomerIDOnList.PerformLayout();
             tabPageListProduct.ResumeLayout(false);
             tabPageListProduct.PerformLayout();
             panelInputPriceOnList.ResumeLayout(false);
@@ -1414,6 +1535,8 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDownPriceOnList).EndInit();
             panelProductIDOnList.ResumeLayout(false);
             panelProductIDOnList.PerformLayout();
+            tpLookUpOrders.ResumeLayout(false);
+            tpLookUpOrders.PerformLayout();
             tpNewBuy.ResumeLayout(false);
             tpNewBuy.PerformLayout();
             panel2.ResumeLayout(false);
@@ -1442,29 +1565,6 @@
             panelCustomerName.ResumeLayout(false);
             panelCustomerName.PerformLayout();
             tpProducts.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
-            panelDebtOnList.ResumeLayout(false);
-            panelDebtOnList.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numDebtOnList).EndInit();
-            panelCustomerNameOnList.ResumeLayout(false);
-            panelCustomerNameOnList.PerformLayout();
-            panelCustomerPhoneOnList.ResumeLayout(false);
-            panelCustomerPhoneOnList.PerformLayout();
-            panelTypeCustomerOnList.ResumeLayout(false);
-            panelTypeCustomerOnList.PerformLayout();
-            panelCustomerIDOnList.ResumeLayout(false);
-            panelCustomerIDOnList.PerformLayout();
-            tabPage2.ResumeLayout(false);
-            tabPage2.PerformLayout();
-            panelTypeEmployeeOnList.ResumeLayout(false);
-            panelTypeEmployeeOnList.PerformLayout();
-            panelEmployeeNameOnList.ResumeLayout(false);
-            panelEmployeeNameOnList.PerformLayout();
-            panelEmployeePhoneOnList.ResumeLayout(false);
-            panelEmployeePhoneOnList.PerformLayout();
-            panelEmployeeIDOnList.ResumeLayout(false);
-            panelEmployeeIDOnList.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1476,21 +1576,108 @@
         private ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private ToolStripMenuItem adminToolStripMenuItem;
         private Label labelCustomers;
+        private Panel panel11;
+        private NumericUpDown numericUpDown4;
+        private Label label7;
+        private Panel panel14;
+        private NumericUpDown numericUpDown5;
+        private Label label16;
+        private Button button5;
+        private Button button6;
+        private Panel panel15;
+        private NumericUpDown numericUpDown6;
+        private Label label17;
+        private TabPage tabPage2;
+        private Button buttonAddEmployee;
+        private Button buttonUpdateEmployee;
+        private Panel panelTypeEmployeeOnList;
+        private ComboBox comboBoxTypeEmployeeOnList;
+        private Label labelTypeEmployeeOnList;
+        private Button buttonDeleteEmployee;
+        private Panel panelEmployeeNameOnList;
+        private ComboBox comboBoxEmployeeNameOnList;
+        private Label labelEmployeeNameOnList;
+        private Panel panelEmployeePhoneOnList;
+        private ComboBox comboBoxEmployeePhoneOnList;
+        private Label labelEmployeePhoneOnList;
+        private Panel panelEmployeeIDOnList;
+        private ComboBox comboBoxEmployeeIDOnList;
+        private Label labelEmployeeIDOnList;
+        private Label labelTitleListEmployee;
+        private ListView lsvListEmployee;
+        private ColumnHeader columnHeader17;
+        private ColumnHeader columnHeader18;
+        private ColumnHeader columnHeader19;
+        private TabPage tabPage1;
+        private Button buttonUpdateCustomer;
+        private Button buttonAddCustomer;
+        private Panel panelDebtOnList;
+        private NumericUpDown numDebtOnList;
+        private Label labelDebtOnList;
+        private Panel panelCustomerNameOnList;
+        private ComboBox comboBoxCustomerNameOnList;
+        private Label labelCustomerNameOnList;
+        private Panel panelCustomerPhoneOnList;
+        private ComboBox comboBoxCustomerPhoneOnList;
+        private Label labelCustomerPhoneOnList;
+        private Panel panelTypeCustomerOnList;
+        private ComboBox comboBoxTypeCustomerOnList;
+        private Label labelTypeCustomerOnList;
+        private Panel panelCustomerIDOnList;
+        private ComboBox comboBoxCustomerIDOnList;
+        private Label labelCustomerIDOnList;
+        private Button buttonDeleteCustomer;
+        private Label labelTitleListCustomer;
+        private ListView lsvListCustomer;
+        private ColumnHeader columnHeader12;
+        private ColumnHeader columnHeader13;
+        private ColumnHeader columnHeader14;
+        private ColumnHeader columnHeader15;
         private TabPage tabPageListProduct;
+        private Button buttonUpdateProduct;
+        private Button buttonAddProduct;
+        private Panel panelInputPriceOnList;
+        private NumericUpDown numericUpDownImportPriceOnList;
+        private Label labelInputPriceOnList;
+        private Panel panelQuantityOnList;
+        private NumericUpDown numericUpDownQuatityOnList;
+        private Label labelQuantityOnList;
+        private Panel panelProductNameOnList;
+        private ComboBox comboBoxProductNameOnList;
+        private Label labelProductNameOnList;
+        private Panel panelUnitOnList;
+        private ComboBox comboBoxUnitOnList;
+        private Label labelUnitOnList;
+        private Panel panelPriceOnList;
+        private NumericUpDown numericUpDownPriceOnList;
+        private Label labelPriceOnList;
+        private Panel panelProductIDOnList;
+        private ComboBox comboBoxProductIDOnList;
+        private Label labelProductIDOnList;
         private Button buttonDeleteProduct;
         private Label labelTitleListProduct;
         private ListView lsvListProduct;
-        private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
         private ColumnHeader columnHeader5;
         private ColumnHeader columnHeader6;
         private TabPage tpLookUpOrders;
-        private TabPage tpPaying;
         private TabPage tpNewBuy;
+        private Panel panel2;
+        private ComboBox comboBoxPaymentMethod;
+        private Label label2;
+        private Button buttonBuy;
+        private Button buttonDeleteProductIntoOrder;
+        private Panel panelTotalAmount;
+        private NumericUpDown numericUpDownTotalAmount;
+        private Label labelTotalAmount;
         private Label labelTitleCustomer;
-        private ListView lsvNewOrderDetailList;
+        private ListView lsvNewListOrderDetail;
+        private ColumnHeader columnHeader7;
+        private ColumnHeader columnHeader8;
+        private ColumnHeader columnHeader9;
+        private ColumnHeader columnHeader10;
         private Panel panelOrderDate;
         private DateTimePicker dateTimePickerOrderDate;
         private Label labelOrderDate;
@@ -1500,6 +1687,7 @@
         private Label labelQuatity;
         private Button buttonAddProductIntoOrder;
         private Panel panelPrice;
+        private NumericUpDown numericUpDownPrice;
         private Label labelPrice;
         private Label labelTitleProduct;
         private Panel panelProductID;
@@ -1522,92 +1710,15 @@
         private ComboBox comboBoxCustomerName;
         private Label labelCustomerName;
         private TabControl tpProducts;
-        private Panel panelProductIDOnList;
-        private Label labelProductIDOnList;
-        private Panel panelProductNameOnList;
-        private ComboBox comboBoxProductNameOnList;
-        private Label labelProductNameOnList;
-        private Panel panelUnitOnList;
-        private ComboBox comboBoxUnitOnList;
-        private Label labelUnitOnList;
-        private Panel panelPriceOnList;
-        private Label labelPriceOnList;
-        private Panel panelInputPriceOnList;
-        private Label labelInputPriceOnList;
-        private Panel panelQuantityOnList;
-        private Label labelQuantityOnList;
-        private NumericUpDown numericUpDownImportPriceOnList;
-        private NumericUpDown numericUpDownQuatityOnList;
-        private NumericUpDown numericUpDownPriceOnList;
-        private Button buttonUpdateProduct;
-        private Button buttonAddProduct;
-        private Panel panelTotalAmount;
-        private NumericUpDown numericUpDownTotalAmount;
-        private Label labelTotalAmount;
-        private Panel panel2;
-        private ComboBox comboBox1;
-        private Label label2;
-        private Button buttonBuy;
-        private Button buttonDeleteProductIntoOrder;
-        private Button button2;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
-        private Button buttonUpdateCustomer;
-        private Button buttonAddCustomer;
-        private Panel panelDebtOnList;
-        private NumericUpDown numDebtOnList;
-        private Label labelDebtOnList;
-        private Panel panelCustomerNameOnList;
-        private ComboBox comboBoxCustomerNameOnList;
-        private Label labelCustomerNameOnList;
-        private Panel panelCustomerPhoneOnList;
-        private ComboBox comboBoxCustomerPhoneOnList;
-        private Label labelCustomerPhoneOnList;
-        private Panel panelTypeCustomerOnList;
-        private Label labelTypeCustomerOnList;
-        private Panel panelCustomerIDOnList;
-        private Label labelCustomerIDOnList;
-        private Button buttonDeleteCustomer;
-        private Label labelTitleListCustomer;
-        private ListView lsvListCustomer;
-        private ColumnHeader columnHeader12;
-        private ColumnHeader columnHeader13;
-        private ColumnHeader columnHeader14;
-        private ColumnHeader columnHeader15;
-        private ComboBox comboBoxTypeCustomerOnList;
-        private Panel panel11;
-        private NumericUpDown numericUpDown4;
-        private Label label7;
-        private Panel panelEmployeeNameOnList;
-        private ComboBox comboBoxEmployeeNameOnList;
-        private Label labelEmployeeNameOnList;
-        private Panel panelEmployeePhoneOnList;
-        private ComboBox comboBoxEmployeePhoneOnList;
-        private Label labelEmployeePhoneOnList;
-        private Panel panel14;
-        private NumericUpDown numericUpDown5;
-        private Label label16;
-        private Panel panelEmployeeIDOnList;
-        private Label labelEmployeeIDOnList;
-        private Label labelTitleListEmployee;
-        private ListView lsvListEmployee;
-        private ColumnHeader columnHeader17;
-        private ColumnHeader columnHeader18;
-        private ColumnHeader columnHeader19;
-        private Button button5;
-        private Button button6;
-        private Button buttonDeleteEmployee;
-        private Panel panelTypeEmployeeOnList;
-        private ComboBox comboBoxTypeEmployeeOnList;
-        private Label labelTypeEmployeeOnList;
-        private Panel panel15;
-        private NumericUpDown numericUpDown6;
-        private Label label17;
-        private Button buttonAddEmployee;
-        private Button buttonUpdateEmployee;
-        private ComboBox comboBoxProductIDOnList;
-        private ComboBox comboBoxCustomerIDOnList;
-        private ComboBox comboBoxEmployeeIDOnList;
-        private NumericUpDown numericUpDownPrice;
+        private Label labelTitleListOrder;
+        private ListView lsvListOrder;
+        private ColumnHeader columnHeader21;
+        private ColumnHeader columnHeader22;
+        private ColumnHeader columnHeader23;
+        private ColumnHeader columnHeader24;
+        private ColumnHeader columnHeader25;
+        private ColumnHeader columnHeader26;
+        private ColumnHeader columnHeader27;
+        private Button buttonSeeOrderDetail;
     }
 }

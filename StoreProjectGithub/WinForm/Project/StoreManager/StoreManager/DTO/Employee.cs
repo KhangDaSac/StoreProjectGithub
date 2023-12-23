@@ -21,9 +21,16 @@ namespace StoreManager.DTO
 
         public Employee() { }
 
-        public Employee( int employeeID, String employeeName, String phone, String typeEmployee)
+        public Employee(int employeeID, String employeeName, String phone, String typeEmployee)
         {
             this.employeeID = employeeID;
+            this.employeeName = employeeName;
+            this.phone = phone;
+            this.typeEmployee = typeEmployee;
+        }
+
+        public Employee(String employeeName, String phone, String typeEmployee)
+        {
             this.employeeName = employeeName;
             this.phone = phone;
             this.typeEmployee = typeEmployee;
